@@ -1,0 +1,40 @@
+/*
+Error: Invalid Windows-874 character "\xE2"
+        on line 8 of D:\xampp\htdocs\Nrrueportfolio\bower_components\Ionicons\scss\ionicons.scss
+
+3:   Ionicons, v#{$ionicons-version}
+4:   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
+5:   https://twitter.com/benjsperry  https://twitter.com/ionicframework
+6:   MIT License: https://github.com/driftyco/ionicons
+7: 
+8:   Android-style icons originally built by Google’s
+9:   Material Design Icons: https://github.com/google/material-design-icons
+10:   used under CC BY http://creativecommons.org/licenses/by/4.0/
+11:   Modified icons to fit ionicon’s grid from original.
+12: *\/
+13: 
+
+Backtrace:
+D:\xampp\htdocs\Nrrueportfolio\bower_components\Ionicons\scss\ionicons.scss:8
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/util.rb:1297:in `rescue in block in find_encoding_error'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/util.rb:1294:in `block in find_encoding_error'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/util.rb:1293:in `each'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/util.rb:1293:in `each_with_index'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/util.rb:1293:in `find_encoding_error'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/util.rb:908:in `rescue in check_sass_encoding'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/util.rb:904:in `check_sass_encoding'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/engine.rb:433:in `check_encoding!'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/engine.rb:389:in `_to_tree'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/engine.rb:278:in `render'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:420:in `run'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/lib/ruby/gems/2.2.0/gems/sass-3.4.20/bin/sass:13:in `<top (required)>'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/bin/sass:23:in `load'
+C:/Program Files/Adobe/Adobe Dreamweaver CC 2017/ruby/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid Windows-874 character \"\xE2\"\A         on line 8 of D:\xampp\htdocs\Nrrueportfolio\bower_components\Ionicons\scss\ionicons.scss\A \A 3:   Ionicons, v#{$ionicons-version}\A 4:   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/\A 5:   https://twitter.com/benjsperry  https://twitter.com/ionicframework\A 6:   MIT License: https://github.com/driftyco/ionicons\A 7: \A 8:   Android-style icons originally built by Google’s\A 9:   Material Design Icons: https://github.com/google/material-design-icons\A 10:   used under CC BY http://creativecommons.org/licenses/by/4.0/\A 11:   Modified icons to fit ionicon’s grid from original.\A 12: */\A 13: "; }

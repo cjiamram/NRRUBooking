@@ -1,0 +1,44 @@
+$(function(){
+ 
+ 
+ 
+    $('#calendar').fullCalendar({
+        header: {
+            left: 'prev,next today',  //  prevYear nextYea
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay',
+        },  
+        buttonIcons:{
+            prev: 'left-single-arrow',
+            next: 'right-single-arrow',
+            prevYear: 'left-double-arrow',
+            nextYear: 'right-double-arrow'        
+        },       
+        events: {
+            url: 'data_events.php',
+            error: function() {
+ 
+            }
+        },    
+        eventLimit:true,
+        lang: 'th',
+        eventMouseover: function( event, jsEvent, view ){
+            callTooltip("#infotooltip",jsEvent,event.title);   
+        },
+        eventMouseout: function( event, jsEvent, view ){
+            $("#infotooltip").hide();  
+        }                                               
+    });
+   
+    var callTooltip = function (obj,jsEvent,strText){ // ฟังก์ชั่นแสดงกล่องข้อความ Tooltip  
+            var locateX=jsEvent.pageX;     
+            var locateY=jsEvent.pageY;   
+            locateX+=10;  
+            locateY+=10;  
+            $(obj).show().css({  
+                left:locateX,  
+                top:locateY  
+            }).html(strText);                 
+    }    
+     
+});

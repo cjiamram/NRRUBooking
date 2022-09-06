@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("../plugins/morris/morris.css");
+@import url("../plugins/bootstrap-sweetalert/sweet-alert.css");
+@import url("../plugins/timepicker/bootstrap-timepicker.min.css");
+@import url("../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css");
+@import url("../plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css");
+@import url("../plugins/clockpicker/css/bootstrap-clockpicker.min.css");
+@import url("../plugins/bootstrap-daterangepicker/daterangepicker.css");
+@import url("../plugins/tablesaw/css/tablesaw.css");
+@import url("../plugins/datatables/dataTables.colVis.css");
+@import url("../plugins/datatables/dataTables.bootstrap.min.css");
+@import url("../plugins/datatables/fixedColumns.dataTables.min.css");
+@import url("../plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css");
+@import url("../plugins/switchery/css/switchery.min.css");
+@import url("../plugins/multiselect/css/multi-select.css");
+@import url("../plugins/select2/css/select2.min.css");
+@import url("../plugins/bootstrap-select/css/bootstrap-select.min.css");
+@import url("../plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css");
+@import url("../plugins/bootstrap-table/css/bootstrap-table.min.css");
+@import url("../plugins/custombox/css/custombox.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css");
+@import url("../plugins/magnific-popup/css/magnific-popup.css");
+@import url("../plugins/jquery-datatables-editable/datatables.css");
+@import url("../plugins/morris/morris.css");
+
+@import url("bootstrap.min.css");
+@import url("core.css");
+@import url("components.css");
+@import url("icons.css");
+@import url("pages.css");
+@import url("menu.css");
+@import url("customize.css");
+@import url("customize1.css");
+@import url("responsive.css");
+@import url("icon-line.css");

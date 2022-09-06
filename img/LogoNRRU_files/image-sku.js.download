@@ -1,0 +1,30 @@
+function getComboA(selectObject) {
+        
+    var attribute = selectObject.id; 
+    if (attribute == "product_attribute_Y"){
+        var value = selectObject.value;
+        var i;
+        if ($('#small-img-roll').children()[value] != undefined){
+            for (i = 0; i < $('#small-img-roll').children().length; i++) {
+                $('#small-img-roll').children()[i].alt = '';
+                $('#small-img-roll').children()[i].className = 'show-small-img'
+            }
+            
+            $('#myimg').attr('src', $('#small-img-roll').children()[value].src)
+            $('#small-img-roll').children()[value].alt = 'now';
+            $('#small-img-roll').children()[value].className = 'show-small-img thumbs active';
+
+            if ($('#small-img-roll').children().length > 4) {
+                if (value >= 3 && value < $('#small-img-roll').children().length -
+                    1) {
+                    $('#small-img-roll').css('left', - (value - 2) * 76 + 'px')
+                } else if (value == $('#small-img-roll').children().length - 1) {
+                    $('#small-img-roll').css('left', -($('#small-img-roll').children().length - 4) *
+                        76 + 'px')
+                } else {
+                    $('#small-img-roll').css('left', '0')
+                }
+            }
+        }
+    }
+}

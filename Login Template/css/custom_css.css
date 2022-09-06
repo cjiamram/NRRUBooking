@@ -1,0 +1,561 @@
+
+
+
+/*
+body, html {
+	height: 100%;
+	font-family: Poppins-Regular, sans-serif;
+	
+	 background-image: url('../images/bg_login.jpg');
+	
+}
+
+*/
+
+.form-control_cc {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.pad_row{
+	padding:1%;
+}
+.bg_header{
+	background: #cbc1d7;
+}
+.bg_logo{
+	background: #896994;
+}
+.bg_gray{
+	background: #644061;
+}
+.bg_left{
+	background: #3497c8;
+}
+.border_menu{
+ 	background: #ff2f00;
+ 	font-size: 1em;
+}
+
+.border_menu a{
+ 	background: #ff7d62;
+ 	font-size: 1em;
+}
+
+
+.bg_head{
+	background-color: #6b3d22;
+    padding: 5px;
+}
+.bg_web{
+	background-color: white;
+	    padding-top: 1%;
+}
+.bg_search{
+	
+}
+.bg_body_search{
+	
+	background: #b7d4ec;
+}
+.bg_link{
+	background: #c19e8a;
+	    color: #3c1803;
+}
+.bg_body_link {
+	      border: 1px solid;
+	      border-radius: 10px;
+	  color: blueviolet;
+	  text-indent: 0.3em;
+	  font-size: 1rem;
+}
+.bg_body_link a{
+	
+	  color: blueviolet;
+}
+.bg_body_link a:hover{
+	 color: #402c5d;
+}
+ 
+.bg_course{
+	background: #c19e8a;
+	    color: #3c1803;
+}
+.bg_fff{
+	background: #fff;
+}
+.bg_conf{
+	background: #2e3e74;
+}
+.bg_news1{
+background: #80d5f1;
+    color: #111312;
+    padding: 2px;
+}
+.bg_news2{
+background: #fabf0b;
+    color: #111312;
+    padding: 2px;
+}
+.bg_news3{
+background: #9a7696;
+    color: #111312;
+    padding: 2px;
+}
+.bg_news4{
+background: #6a3d65;
+    color: #fff;
+    padding: 2px;
+}
+.bg_news5{
+background: #5e9dca;
+    color: #111312;
+    padding: 2px;
+}
+.bg_news6{
+background: #4890c3;
+    color: #111312;
+    padding: 2px;
+}
+
+.portfolio-item {
+  margin-bottom: 5px;
+}
+
+.font_spacing{
+	letter-spacing: -1pt;
+}
+.let_spacing{
+	letter-spacing: 1pt;
+}
+.icon_color{
+	color: #fff;
+}
+.box_imgname{
+	padding: 8px;
+	color: white;
+	background: linear-gradient(to right, #cc8e00 10%,#f9d922 53%,#cc8e00 91%);
+	
+}
+.bg_content{
+	background: #fff;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+.bg_footer{
+	background-color: #13538e;
+	
+}
+.lh-1{
+	    line-height: 1;
+}
+.mp-1{
+	padding: 0.75rem 1.5rem;
+}
+.pad_news{
+	    padding: 8%;
+	    
+}
+.pad_menu{
+	    padding-right: 1%;
+	    
+}
+
+.box_shadow{
+	-webkit-box-shadow: 0px 3px 21px 2px rgba(160,116,227,1);
+-moz-box-shadow: 0px 3px 21px 2px rgba(160,116,227,1);
+box-shadow: 0px 3px 21px 2px rgba(160,116,227,1);
+
+
+}
+.box_admin{
+
+   -webkit-box-shadow: 0px 3px 27px 7px rgba(188,187,189,1);
+-moz-box-shadow: 0px 3px 27px 7px rgba(188,187,189,1);
+box-shadow: 0px 3px 27px 7px rgba(188,187,189,1);
+
+}
+.box_blackhome{
+	list-style: none;
+	font-size: 1rem;
+}
+.f_icon{
+	    float: right;
+    padding-top: 3px;
+    padding-right: 1rem;
+} 
+
+.css_inputBox input{
+	border-left-style: hidden;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-radius: inherit;
+}
+
+.txt_iconLogin{
+	color: #3ab1e2;
+}
+
+/* 0-767 Phone*/
+
+@media(max-width: 575.98px){
+		.logo_nrru{
+		width: 10%;
+    	padding: 0px;
+    	padding-bottom: 1rem;
+	}
+	.icon_u{
+		text-align: left;
+	}
+	.img_nrru img{
+  		
+  		text-align: center;
+  	}
+  	.marpad_login{
+		margin-top: 5px;
+    	padding: 6px;
+	}
+	.font_loginH{
+		text-indent: 1%;
+	    font-size: x-large;
+	    font-weight: bold;
+	    letter-spacing: 1px;
+	    color: #19a4dd;
+	    line-height: 1;
+   	 	font-family: 'DBBrandVoiceX';
+	}
+	.font_loginH2{
+		text-indent: 1%;
+	    font-size: 1.5em;
+	   
+	    color: #b3b2b4;
+	    line-height: 1;
+	    font-family: 'DBBrandVoiceX';
+	}
+	
+	.font_loginB{
+		text-indent: 1%;
+    	font-size: x-large;
+    	
+   		letter-spacing: 1px;
+    	color: #19a4dd;
+   	 	line-height: 1;
+   	 	font-family: 'DBBrandVoiceX';
+	}
+	
+	.font_loginB2{
+		text-indent: 1%;
+	    font-size: small;
+	    
+	    letter-spacing: 1px;
+	    color: #999797;
+	    line-height: 1;
+	    font-family: revert;
+	}
+	.btn_login_B{
+  	border: #0f78a3;
+    background: #1fa6dee0;
+    font-family: 'DBBrandVoiceX';
+    font-size: xx-large;
+    letter-spacing: 3px;
+    padding: 3px;
+    color: #fff;
+    border-radius: initial;
+    
+  }
+	
+
+}
+/*@media (min-width: 768px)and (max-width: 767.98px) */
+@media(min-width: 576px)  {	
+		.logo_nrru{
+		width: 15%;
+    	padding: 0px;
+    	padding-bottom: 1rem;
+	}
+	.icon_u{
+		text-align: left;
+	}
+	.img_nrru img{
+  	
+  		text-align: center;
+  	}
+  	.marpad_login{
+		margin-top: 5rem;
+    	
+	}
+	.font_loginH{
+		text-indent: 1%;
+	    font-size: x-large;
+	    font-weight: bold;
+	    letter-spacing: 1px;
+	    color: #19a4dd;
+	    line-height: 1;
+   	 	font-family: 'DBBrandVoiceX';
+	}
+	.font_loginH2{
+		text-indent: 1%;
+	    font-size: 1.1rem;
+	    color: #999;
+	    line-height: 1;
+	    font-family: 'DBBrandVoiceX';
+	}
+	
+	.font_loginB{
+		text-indent: 1%;
+    	font-size: x-large;
+    	
+   		letter-spacing: 1px;
+    	color: #19a4dd;
+   	 	line-height: 1;
+   	 	font-family: 'DBBrandVoiceX';
+	}
+	
+	.font_loginB2{
+		text-indent: 1%;
+	    font-size: 1.1rem;
+	    
+	    letter-spacing: 1px;
+	    color: #999797;
+	    line-height: 1;
+	    font-family: 'DBBrandVoiceX';
+   
+	}
+	.btn_login_B{
+  	border: #0f78a3;
+    background: #1fa6dee0;
+    font-family: 'DBBrandVoiceX';
+    font-size: xx-large;
+    letter-spacing: 3px;
+    padding: 3px;
+    color: #fff;
+    border-radius: initial;
+    
+  }
+	
+
+}
+
+/* 768-991 Tablets*/
+/*@media (max-width: 767px) and (max-width: 991.98px*/
+@media (min-width: 768px){	
+	.logo_nrru{
+		width: 18%;
+    	padding: 0px;
+    	padding-bottom: 1rem;
+	}
+	.icon_u{
+		text-align: left;
+	}
+	.img_nrru img{
+  		margin-top: 15px;
+  		text-align: center;
+  	}
+	.font_loginH{
+		text-indent: 1%;
+	    font-size: 1.8rem;
+	    letter-spacing: 1px;
+	    color: #19a4dd;
+	    line-height: 1;
+   	 	font-family: 'DBBrandVoiceX';
+	}
+	.font_loginH2{
+		text-indent: 1%;
+	    font-size: 1.3rem;
+	    
+	    color: #999;
+	    line-height: 1;
+	    font-family: 'DBBrandVoiceX';
+	}
+	
+	.font_loginB{
+		text-indent: 1%;
+    	font-size: x-large;
+    	/* font-weight: bold; */
+   		letter-spacing: 1px;
+    	color: #19a4dd;
+   	 	line-height: 1;
+   	 	font-family: 'DBBrandVoiceX';
+	}
+
+	.font_loginB2{
+		text-indent: 1%;
+	    font-size: 1.2rem;
+	    /* font-weight: bold; */
+	    letter-spacing: 1px;
+	    color: #999797;
+	    line-height: 1;
+	        font-family: 'DBBrandVoiceX';
+   
+	}
+
+	.btn_login_B{
+	  	border: #0f78a3;
+	    background: #1fa6dee0;
+	    font-family: 'DBBrandVoiceX';
+	    font-size: xx-large;
+	    letter-spacing: 3px;
+	    padding: 3px;
+	    color: #fff;
+	    border-radius: initial;
+	   
+  }
+	
+}
+
+
+/* 991-1199 Desktops*/
+
+/*@media (min-width: 992px) and (max-width: 1199.98px) */
+@media (min-width: 992px){
+		.logo_nrru{
+		width: 100%;
+		padding: 0px;
+		
+	}
+	.icon_u{
+		text-align: right;
+		padding-right: inherit;
+	}
+	
+	
+	.img_nrru img{
+  		
+  		text-align: center;
+  	}
+	.font_loginH{
+		text-indent: 1%;
+	    font-size: 1.8rem;	   
+	    letter-spacing: 1px;
+	    color: #19a4dd;
+	    line-height: 1;
+	    font-family: 'DBBrandVoiceX';
+	    padding-left: 0px;
+	    padding-right: 0px;
+	}
+	.font_loginH2{
+		text-indent: 1%;
+	    font-size: 1.3rem;
+	    color: #999;
+	    line-height: 1;
+	    font-family: 'DBBrandVoiceX';
+	}
+	.font_loginB{
+		text-indent: 1%;
+	    font-size: 1.8rem;
+	    /* font-weight: bold; */
+	    letter-spacing: 1px;
+	    color: #19a4dd;
+	    line-height: 1;
+	    font-family: 'DBBrandVoiceX';
+	}
+
+	.font_loginB2{
+		text-indent: 1%;	   
+	    letter-spacing: 1px;
+	    color: #999797;
+	    line-height: 1;
+	    font-family: 'DBBrandVoiceX';
+   		font-size: larger;
+	}
+	
+  .btn_login_B{
+	border: #0f78a3;
+    background: #1fa6dee0;
+    font-family: 'DBBrandVoiceX';
+    font-size: xx-large;
+    letter-spacing: 3px;
+    padding: 3px;
+    color: #fff;
+    border-radius: initial;
+    
+  }
+  
+ /*  body {
+		background-image: url('../images/bg_login.jpg');
+		background-attachment: fixed;
+		background-position: top;
+		background-repeat: no-repeat;
+    	background-size: cover;
+    	background-size: 100%;
+		
+	}
+	*/
+	
+}
+
+@media (min-width: 1200px){
+	.logo_nrru{
+		width: 100%;
+		padding: 0px;
+		
+	}
+	
+	.icon_u{
+		text-align: right;
+		padding-right: inherit;
+	}
+	.img_nrru img{
+  	
+  		text-align: center;
+  	}
+	.font_loginH{
+		text-indent: 1%;
+	    font-size: xx-large;
+	    font-weight: bold;
+	    letter-spacing: 1px;
+	    color: #19a4dd;
+	    line-height: 1;
+   	 	font-family: 'DBBrandVoiceX';
+	}
+	.font_loginH2{
+		text-indent: 1%;
+	    font-size: 1.5em;
+	    /* font-weight: bold; */
+	    /* letter-spacing: 3px; */
+	    color: #b3b2b4;
+	    line-height: 1;
+	    font-family: 'DBBrandVoiceX';
+	}
+	
+	.font_loginB{
+		text-indent: 1%;
+	    font-size: 1.8rem;
+	    /* font-weight: bold; */
+	    letter-spacing: 1px;
+	    color: #19a4dd;
+	    line-height: 1;
+	    font-family: 'DBBrandVoiceX';
+	}
+
+	.font_loginB2{
+		text-indent: 1%;
+	    letter-spacing: 1px;
+	    color: #999797;
+	    line-height: 1;
+	    font-family: 'DBBrandVoiceX';
+    	font-size: larger;
+	}
+	.btn_login_B{
+	  	border: #0f78a3;
+	    background: #1fa6dee0;
+	    font-family: 'DBBrandVoiceX';
+	    font-size: xx-large;
+	    letter-spacing: 3px;
+	    padding: 3px;
+	    color: #fff;
+	    border-radius: initial;
+	    
+  }
+}
+
