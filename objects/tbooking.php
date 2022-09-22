@@ -755,6 +755,28 @@ class tbooking{
 		return $stmt;
 	}
 
+	public function getBookingDateEvent($bookingDate,$bookingRoom){
+		$query='SELECT  
+			id,
+			bookingDate,
+			startTime,
+			finishTime,
+			bookingName,
+			activity,
+			lineNo,
+			telNo
+		FROM t_booking WHERE 
+			bookingDate <= :bookingDate
+		AND 
+			bookingRoom=:bookingRoom
+		';
+		$stmt = $this->conn->prepare($query);
+		$stmt->bindParam(':bookingDate',$bookingDate);
+		$stmt->bindParam(':bookingRoom',$bookingRoom);
+		$stmt->execute();
+		return $stmt;
+	}
+
 
 
 

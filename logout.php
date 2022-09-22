@@ -4,9 +4,11 @@ session_unset();
 session_destroy();
 function Redirect($url, $permanent = false)
 {
+    session_destroy();
     header('Location: ' . $url, true, $permanent ? 301 : 302);
     exit();
 }
 
-Redirect('TLogin.php', false);
+
+Redirect('index.php', false);
 ?>

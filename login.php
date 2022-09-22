@@ -81,7 +81,7 @@
 <script>
 
     function executeData(url,jsonObj){
-    console.log(url);
+    //console.log(url);
     var result;
     var jsonData=JSON.stringify (jsonObj);
       $.ajax({
@@ -94,7 +94,10 @@
           async:false,
           success: function(data){
               result = data;
-          } 
+          } ,
+            error: function (error) {
+                console.log("error",arguments);
+          }
         //**************
       });
       return result;
@@ -117,7 +120,8 @@
 
 
     function validLogin(){
-      var url="<?=$rootPath?>/user/getUser.php";
+      var url="<?=$cnf->restURL?>user/getUser.php";
+      console.log(url);
       var jsonObj= {
         userName:$("#txtUser").val(),
         password:$("#txtPassword").val()        
@@ -125,23 +129,23 @@
       var jsonData=JSON.stringify (jsonObj);
       //console.log(jsonData);
       var data=executeData(url,jsonObj);
-      //console.log(data);
+      console.log(data.flag);
 
 
       if(data.flag==true){
-        $(location).attr('href','index.php');
+        $(location).attr('href','page.php');
       }
       else
       {
          
             
             url="<?=$rootPath?>/api/nrruCredential.php";
+            //console.log(url);
             data=executeData(url,jsonObj);
             if(data.message===true){
                 url="<?=$rootPath?>/menu/setMenuDefault.php?userCode="+$("#txtUser").val();
-                console.log(url);
                 flag=executeGet(url);
-                //$(location).attr('href','index.php');
+                $(location).attr('href','page.php');
             }
       }
     }

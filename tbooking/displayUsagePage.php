@@ -31,7 +31,7 @@
 <thead>
 	<tr>
 	<th>No.</th>
-	<th>หมายเลขห้อง</th>
+	<th>ห้อง</th>
 	<th>วันที่จอง</th>
 	<th>เวลา</th>
 	<th>ผู้ใช้งาน</th>
@@ -48,11 +48,11 @@
 				$bookingDate= sprintf('%02s',$d["day"])."-".sprintf('%02s',$d["month"])."-".$d["year"];
 					echo "<tr>\n";
 					echo '<td>'.($i++).'</td>'."\n";
-					echo '<td>'.$row["bookingRoom"].'</td>'."\n";
-					echo '<td>'.$bookingDate.'</td>'."\n";
-					echo '<td>'.$row["bookingTime"].'</td>'."\n";
+					echo '<td width=\'150px\'>'.$row["bookingRoom"].'</td>'."\n";
+					echo '<td width=\'150px\'>'.$bookingDate.'</td>'."\n";
+					echo '<td width=\'100px\'>'.$row["bookingTime"].'</td>'."\n";
 					echo '<td>'.$row["bookingName"].'</td>'."\n";
-					echo '<td>'.$row["Activity"].'</td>'."\n";
+					echo '<td><textarea class=\'form-control\' rows=\'2\' style=\'width:100%\'>'.$row["Activity"].'</textarea></td>'."\n";
 					echo "</tr>\n";
 				}
 			}

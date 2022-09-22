@@ -23,11 +23,11 @@
 
 <thead>
 	<th>No.</th>
-	<th>หมายเลขห้อง</th>
+	<th>ห้อง</th>
 	<th>ชั้น</th>
 	<th>อาคาร</th>
-	<th>อุปกรณ์</th>
-	<th>จำนวนคอมพิวเตอร์</th>
+	<th>หมายเหตุ</th>
+	<th>คอมพิวเตอร์</th>
 </thead>
 <tbody>
 		<?php
@@ -36,10 +36,10 @@
 				foreach ($data as $row) {
 					echo "<tr>\n";
 					echo '<td>'.($i++).'</td>'."\n";
-					echo '<td><a href="#" onclick="linkReserve(\''.$row["roomNo"].'\')">'.$row["roomNo"].'</a></td>'."\n";
+					echo '<td width=\'100px\'><a href="#" onclick="linkReserve(\''.$row["roomNo"].'\')">'.$row["roomNo"].'</a></td>'."\n";
 					echo '<td>'.$row["floorNo"].'</td>'."\n";
 					echo '<td>'.$row["Building"].'</td>'."\n";
-					echo '<td>'.$row["Accessory"].'</td>'."\n";
+					echo '<td width=\'150px\'><textarea row=\'2\' style=\'width:100%\' class=\'form-control\'>'.$row["Accessory"].'</textarea></td>'."\n";
 					echo '<td>'.$row["ComputerNo"].'</td>'."\n";
 					echo "</tr>\n";
 				}

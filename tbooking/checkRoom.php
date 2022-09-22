@@ -85,7 +85,7 @@
 	<div class="box-body no-padding">
 
 
-		<div class="col-sm-6" id="dvEmpty">
+		<div class="col-sm-5" id="dvEmpty">
        
      
       <div class="box box-warning">
@@ -99,7 +99,7 @@
       
 
     </div>
-		<div class="col-sm-6" id="dvUsage">
+		<div class="col-sm-7" id="dvUsage">
 
      <div class="box box-success">
             <div class="box-header with-border">

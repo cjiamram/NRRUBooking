@@ -2,12 +2,9 @@
 <?php
   include_once '../lib/classAPI.php';
   include_once '../config/config.php';
-  include_once "../objects/manage.php";
   $cnf=new Config();
   $api=new ClassAPI();
   $rootPath=$cnf->path;
-  $bDate=isset($_GET["bDate"])?Format::getSystemDate($_GET["bDate"]):date("Y-m-d");
-  $bookingRoom=isset($_GET["bookingRoom"])?$_GET["bookingRoom"]:"27.01.01";
 ?>
 
 <html>
@@ -24,10 +21,14 @@
 <script>
 
   function getEvent(){
-     var bookingRoom ='<?=$bookingRoom?>';
-     //var url="<?=$rootPath ?>/tbooking/getBookingEvent.php?bookingRoom="+bookingRoom;
-     var url="<?=$rootPath ?>/tbooking/getBookingDateEvent.php?bookingRoom="+bookingRoom+"&bDate=<?=$bDate?>";
-     console.log(url);
+     var bookingRoom ='<?php
+        $bookingRoom=isset($_GET["bookingRoom"])?$_GET["bookingRoom"]:"27.01.01";
+        echo $bookingRoom;
+        
+        
+     ?>';
+
+     var url="<?=$rootPath ?>/tbooking/getBookingDateEvent.php?bookingRoom="+bookingRoom;
      var data=queryData(url);
      return data;
   }
@@ -43,7 +44,7 @@
         center: 'title',
         right: 'timeGridWeek,timeGridDay,dayGridMonth,listMonth'
       },
-      initialView: 'timeGridWeek',
+      initialView: 'timeGridDay',
       initialDate: currentdate,
       locale: 'th',
       buttonIcons: false, // show the prev/next text
@@ -59,13 +60,20 @@
 
   }
 
-  function initialInput(){
+function initialInput(){
       if($("#link_RoomNo").val()!=""){
-
+        $('#modal-reserve').modal('toggle');
+        var url="<?=$rootPath?>/tbooking/input.php";
+        $("#dvModalContain").load(url);
       }
-  }
- renderCalendar('<?=$bDate?>');
+}
 
+$( document ).ready(function() {
+      var currentdate = new Date();
+      currentdate=getSystemDate(currentdate);
+      renderCalendar(currentdate);
+      //initialInput();
+});
 
 </script>
 <style>
@@ -77,7 +85,7 @@
 
  
 
-
+  <div id='calendar'></div>
 
 </body>
 </html>

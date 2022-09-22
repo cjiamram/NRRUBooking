@@ -4,10 +4,10 @@ class Database{
     // specify your own database credentials
     private $host = "localhost";
     private $db_name = "dbreserveroom";
-    //private $username = "root";
-    //private $password = "";
     private $username = "root";
     private $password = "";
+    //private $username = "cjiamram";
+    //private $password = "Bangy123#";
     public $conn;
  
     // get the database connection

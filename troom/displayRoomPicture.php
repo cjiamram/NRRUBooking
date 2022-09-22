@@ -37,7 +37,7 @@
 			echo "<div class='rcorners'>\n";
 
 			$strRoom="<button type='button' class='btn btn-info'
-			onclick=\"loadCalendar('".$row['RoomNo']."')\">
+			onclick=\"loadCalendarDate('".$row['RoomNo']."')\">
 			<span class='fa fa-calendar'>ปฏิทิน</span>
 			</button>
 			<button type='button' class='btn btn-warning'
@@ -125,7 +125,13 @@
 	 }
 
 	 function loadCalendar(roomNo){
-        var url="<?=$rootPath?>/tbooking/calendarPopup.php?roomNo="+roomNo;
+           var url="<?=$rootPath?>/tbooking/calendarPopup.php?roomNo="+roomNo;
+
+        $("#dvMain").load(url);
+ 	}
+
+ 	 function loadCalendarDate(roomNo){
+        var url="<?=$rootPath?>/tbooking/calendaPopup_1.php?roomNo="+roomNo;
         $("#dvMain").load(url);
  	}
 

@@ -1,14 +1,13 @@
 <?php
       include_once '../config/database.php';
       include_once '../config/config.php';
-    
 
       $cnf=new Config();
       $rootPath=$cnf->path;
+      echo '<input type="hidden" id="obj_id" value="">';
 
 
 ?>
-<input type="hidden" id="obj_id" value="">
 <section class="content-header">
      <h1>
         <b>ระบบการจองห้องประชุม</b>

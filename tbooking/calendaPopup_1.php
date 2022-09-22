@@ -25,18 +25,20 @@
   <div class="box-body no-padding">
   <div>&nbsp;</div>
   <div class="col-sm-12">
-    <!--<div class="col-sm-1"><label>เลือกอาคาร :</label> </div>
-    <div class="col-sm-2">
-      <select class="form-control" id="obj_Building"></select>
-    </div>-->
+
     <div class="col-sm-1"><label>ห้อง :</label> </div>
     <div class="col-sm-2">
-      <!--<select class="form-control" ></select>-->
       <input type="hidden" id="obj_Room" value='<?=$roomNo?>' >
       <label class="form-control" id="obj_RoomLabel"><?=$roomNo?></label>
     </div>
+    <div class="col-sm-1"><label>วันที่ :</label> </div>
+    <div class="col-sm-2">
+      <input type="date" id="obj_bDate" class="form-control" value='<?=date('Y-m-d')?>'>
+    </div>
     <div class="col-sm-1">
-      <!--<input type="button" id="btnReserv" class="btn btn-primary"  value="จองห้อง">-->
+      <input type="button" id="obj_display" class="btn btn-primary"  value="แสดงปฏิทิน">
+    </div>
+    <div class="col-sm-5">&nbsp;
     </div>
   </div>
 
@@ -108,9 +110,8 @@
     }
 
     function displayCalendar(){
+      var url="tbooking/bookingDisplay.php?bookingRoom="+$("#obj_Room").val()+"&bDate="+$("#obj_bDate").val();
 
-      var url="tbooking/bookingCalen.php?bookingRoom="+$("#obj_Room").val();
-      console.log(url);
       $("#calendar").load(url);
 
     }
@@ -120,27 +121,21 @@
 
 
     $( document ).ready(function() {
-      //listBuilding();
-      //listRoom("");
-      //listBookingRoom("");
       displayCalendar();
       isLinkReserve();
      
       //*************Calendar Region******************
      
-    $("#obj_Building").change(function(){
-      //listRoom($("#obj_Building").val());
-    });  
-      
-    $("#obj_Room").change(function(){
-      // displayCalendar();
-    });
-
+   
 
     $("#btnBack").click(function(){
             var url="<?=$rootPath?>/troom/displayRoomPicture.php";
             $("#dvMain").load(url);
 
+    });
+
+    $("#obj_display").click(function(){
+      displayCalendar();
     });
    
 

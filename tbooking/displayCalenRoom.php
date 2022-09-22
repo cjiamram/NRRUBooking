@@ -3,6 +3,7 @@
       include_once '../config/config.php';
       $cnf=new Config();
       $rootPath=$cnf->path;
+
       $roomNo=isset($_GET["roomNo"])?$_GET["roomNo"]:"";
       echo "<input type='hidden' id='link_RoomNo' value='".$roomNo."''>";
   ?>
@@ -13,7 +14,10 @@
         <small>>>ปฏิทินการใช้ห้อง</small>
       </h1>
       <ol class="breadcrumb">
+   
         <input type="button" id="btnBack"  class="btn btn-primary"  value="ย้อนกลับ">
+
+
       </ol>
     </section>
 
@@ -25,18 +29,19 @@
   <div class="box-body no-padding">
   <div>&nbsp;</div>
   <div class="col-sm-12">
-    <!--<div class="col-sm-1"><label>เลือกอาคาร :</label> </div>
-    <div class="col-sm-2">
-      <select class="form-control" id="obj_Building"></select>
-    </div>-->
+
     <div class="col-sm-1"><label>ห้อง :</label> </div>
     <div class="col-sm-2">
-      <!--<select class="form-control" ></select>-->
       <input type="hidden" id="obj_Room" value='<?=$roomNo?>' >
       <label class="form-control" id="obj_RoomLabel"><?=$roomNo?></label>
     </div>
     <div class="col-sm-1">
-      <!--<input type="button" id="btnReserv" class="btn btn-primary"  value="จองห้อง">-->
+      <label>วันที่ :</label> 
+    </div>
+    <div class="col-sm-2">
+      <input type="date" id='obj_calen'>
+    </div>
+    <div class="col-sm-6">&nbsp;
     </div>
   </div>
 
@@ -109,8 +114,8 @@
 
     function displayCalendar(){
 
-      var url="tbooking/bookingCalen.php?bookingRoom="+$("#obj_Room").val();
-      console.log(url);
+      var url="tbooking/displayReserveRoom.php?bookingRoom="+$("#obj_Room").val()+"&sDate="+$("#obj_calen").val();
+      //console.log(url);
       $("#calendar").load(url);
 
     }
@@ -120,28 +125,24 @@
 
 
     $( document ).ready(function() {
-      //listBuilding();
-      //listRoom("");
-      //listBookingRoom("");
       displayCalendar();
       isLinkReserve();
-     
       //*************Calendar Region******************
      
-    $("#obj_Building").change(function(){
-      //listRoom($("#obj_Building").val());
-    });  
-      
-    $("#obj_Room").change(function(){
-      // displayCalendar();
-    });
+      $("#obj_Building").change(function(){
+        //listRoom($("#obj_Building").val());
+      });  
+        
+      $("#obj_Room").change(function(){
+        // displayCalendar();
+      });
 
 
-    $("#btnBack").click(function(){
-            var url="<?=$rootPath?>/troom/displayRoomPicture.php";
-            $("#dvMain").load(url);
+      $("#btnBack").click(function(){
+              var url="<?=$rootPath?>/troom/displayRoomPicture.php";
+              $("#dvMain").load(url);
 
-    });
+      });
    
 
       $("#btnReserv").click(function(){

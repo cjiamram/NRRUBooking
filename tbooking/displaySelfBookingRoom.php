@@ -90,21 +90,19 @@
 			
 			
 
-			echo "<td>
-			<button type='button' class='btn btn-info'
-				data-toggle='modal' data-target='#modal-input'
-				onclick='readOne(".$row['id'].")'>
-				<span class='fa fa-edit'></span>
-			</button>
 			
-		
-			<button type='button'
+			echo  "<td>
+			<a class='btn btn-info' href=\'#\'
+			class='btn btn-info'
+				data-toggle='modal' data-target='#modal-input'
+				title='แก้ไขข้อมูล'
+				onclick='readOne(".$row['id'].")'>
+			<span class='fa fa-edit'></span></a>
+			<a class='btn btn-danger'  href=\'#\' title='ลบการจองห้อง' 
 				class='btn btn-danger'
 				onclick='confirmDelete(".$row['id'].")'>
-				<span class='fa fa-trash'></span>
-			</button>
-
-			</td>\n";
+				<span class='fa fa-trash'></span></a>
+			</td>";
 
 			echo "</tr>\n";
 		}
