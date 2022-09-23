@@ -43,7 +43,8 @@
 			for(i=0;i<data.length;i++){
 				strT+="<tr>\n";
 				strT+="<td >"+(i+1)+"</td>\n";
-				strT+="<td width='100px'><a href='#' onclick=\'linkReserve('"+data[i].roomNo+"')\' >"+data[i].roomNo+"</a></td>\n";
+				strV="<input type='hidden' id='R"+i+"' value='"+data[i].roomNo+"'>";
+				strT+="<td width='100px'><a href='#' onclick=\'linkReserve("+i+")\' >"+data[i].roomNo+strV+"</a></td>\n";
 				strT+="<td>"+data[i].floorNo+"</td>\n";
 				strT+="<td width='60px' align='center'>"+data[i].Building+"</td>\n";
 				strT+="<td width='150px'><textarea row='2' style='width:100%' class='form-control'>"+data[i].Accessory+"</textarea></td>\n";
@@ -55,9 +56,10 @@
 		$("#tbEmpty").html(strT); 
 	}
 
-	function linkReserve(roomNo){
+	function linkReserve(i){
 		 var  sTime=$("#obj_sHr").val()+":"+$("#obj_sMn").val();
 		 var  fTime=$("#obj_fHr").val()+":"+$("#obj_fMn").val();
+		 var roomNo=$("#R"+i).val();
 		 var link="<?=$rootPath?>/tbooking/inputBooking.php?roomNo="+roomNo+"&bookingDate="+$("#obj_bookingDate").val()+"&sTime="+sTime+"&fTime="+fTime+"&flagCheck=true";
 		 $("#dvMain").load(link);
 
