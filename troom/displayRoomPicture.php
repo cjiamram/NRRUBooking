@@ -21,6 +21,7 @@
 	$url=$cnf->restURL;
 
 	$url=$cnf->restURL."troom/getBookingRoom.php";
+	//print_r($url);
 	$rootPath=$cnf->path;
 
 	$picURL=$rootPath."/img/Room.jpg";
@@ -101,6 +102,8 @@
 
 <script>
 	
+	
+
 	function viewRoom(roomNo){
 		var url="<?=$rootPath?>/troom/getRoomPlan.php?roomNo="+roomNo;
 		

@@ -1,4 +1,6 @@
 <?php
+include_once "config/config.php";
+$cnf=new Config();
 session_start();
 session_unset();
 session_destroy();
@@ -10,5 +12,5 @@ function Redirect($url, $permanent = false)
 }
 
 
-Redirect('index.php', false);
+Redirect($cnf->restURL, false);
 ?>

@@ -180,7 +180,7 @@
 
 
      if(data.flag==true){
-        $(location).attr('href','index.php');
+        $(location).attr('href','page.php');
       }
       else
       {
@@ -193,7 +193,7 @@
                 var url="<?=$rootPath?>/menu/setMenuDefault.php?userCode="+$("#txtUser").val();
                 console.log(url);
                 var flag=executeGet(url);
-                $(location).attr('href','index.php');
+                $(location).attr('href','page.php');
             }else{
 
             		swal.fire({

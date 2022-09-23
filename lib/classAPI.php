@@ -4,6 +4,8 @@
 		{
 		    $curl = curl_init();
 
+		    //print_r($url);
+
 		    switch ($method)
 		    {
 		        case "POST":
@@ -16,8 +18,26 @@
 		            curl_setopt($curl, CURLOPT_PUT, 1);
 		            break;
 		        default:
-		            if ($data)
-		                $url = sprintf("%s?%s", $url, http_build_query($data));
+		            if ($data){
+		                
+		                $pieces = explode(" ", $url);
+		                if($pieces[0]==="http")
+		                	$url = sprintf("%s?%s", $url, http_build_query($data));
+		                else
+		                if($pieces[0]==="https"){
+		                	//print_r("xxxxxx");
+		                	$curl_handle=curl_init();
+							curl_setopt($curl_handle, CURLOPT_URL,$url);
+							curl_setopt($curl_handle, CURLOPT_CUSTOMREQUEST, "GET");
+							curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT, 2);
+							curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+							$query = curl_exec($curl_handle);
+							$datas = json_decode($query, true);
+							curl_close($curl_handle);
+							return $datas;
+		                }
+
+		             }
 		    }
 
 

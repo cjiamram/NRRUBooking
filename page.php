@@ -1,64 +1,23 @@
 <!DOCTYPE html>
 <?php
-  session_start();
+    session_start();
   //include_once "objects/pageInfo.php";
   include_once "config/config.php";
-  include_once "lib/classAPI.php";
-  //include_once "api/nrruCredentialSSO.php";
 
   $cnf=new Config();
-  $api=new ClassAPI();
-  $credential=
   $rootPath=$cnf->path;
 
 
 
   $_SESSION["lang"]="TH";
-
   if(!isset($_SESSION["UserName"])){
-    if(!isset($_GET["userCode"])){
-       header("location:main.php");
-       //header("location:https://nrrudataservice.nrru.ac.th/php-azure/authen.php?wordkId=a2a8b0bc331ac58b265474307e87fbc61da977c1"); 
-    }else{
-       $userCode=isset($_GET["userCode"])?$_GET["userCode"]:"";
-       
-       //print_r($userCode);
-       //$url=$rootPath ."/api/nrruCredentialSSO.php?userCode=".$userCode ;
-       //$response=$api->getAPI($url); 
-
-       /********************************/
-      require_once("lib/nusoap.php");
-      $client = new nusoap_client("http://entrance.nrru.ac.th/nrruwebservice/nrruWebService_SSO.php?wsdl",true);
-      $userCode=isset($_GET["userCode"])?$_GET["userCode"]:"";
-      $params = array(
-      'userlogin' => $userCode
-      );
-      $data = $client->call("getUserLogin",$params); 
-      $obj = json_decode($data);
-      $user=$obj[0];
-
-
-
-      if(intval($user["staffstatus"])>0){
-              $_SESSION["staffid"]=$user["staffid"] ;
-              $_SESSION["userCode"]=$user["username"];
-              $_SESSION["UserName"]=$user["username"];
-              $_SESSION["FullName"]=$user["firstname"].' '.$user["lastname"]  ;
-              $_SESSION["Picture"]=$user["picture"];
-              $_SESSION["DepartmentId"]=$user["departmentcode1"];
-      } else{
-        //echo json_encode(array("message"=>false));
-      }
-
-
-       /*******************************/ 
-    } 
-  }else{
-        echo "<input type='hidden' id='obj_staffId' value='".$_SESSION["UserName"]."' >";
-  } 
-
-
-
+      header( "location:logout.php");
+      exit();
+    }
+  else
+  {
+    echo "<input type='hidden' id='obj_staffId' value='".$_SESSION["UserName"]."' >";
+  }
 ?>
 <html>
 <head>
@@ -353,6 +312,7 @@
   <div class="control-sidebar-bg"></div>
   <script>
 
+  
   async function imageExists(imgUrl) {
     if (!imgUrl) {
         return false;
@@ -378,8 +338,6 @@
 
 
 $("#btnBackMain").click(function(){
-            //var url="<?=$rootPath?>/troom/displayRoomPicture.php";
-            //$("#dvMain").load(url);
             $("#dvMain").css({"display":"block"});
             $("#dvMain1").css({"display":"none"});
 
@@ -395,7 +353,7 @@ $("#btnBackMain").click(function(){
 
 
   function initialize(){
-  $("#dvMain").load("<?=$rootPath?>/troom/displayRoomPicture.php");
+  $("#dvMain").load("<?=$rootPath?>/troom/displayRoomPictureJS.php");
   $("#dvMain1").css({"display":"none"});
   }
 
@@ -403,6 +361,8 @@ $("#btnBackMain").click(function(){
      getHeadMenu("#ulMenu");
      initialize();
    });
+
+  
 
   
 

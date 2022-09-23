@@ -8,7 +8,7 @@
 	$url="http://nrruapp.nrru.ac.th/NRRUCredential/NRRUCredentialSSO.php?userCode=".$userCode;
 	$user=$api->getAPI($url);
 
-	print_r($user);
+	//print_r($user);
 
 	
 
@@ -19,8 +19,7 @@
 					$_SESSION["FullName"]=$user["firstname"].' '.$user["lastname"]  ;
 					$_SESSION["Picture"]=$user["picture"];
 					$_SESSION["DepartmentId"]=$user["departmentcode1"];
-					//echo json_encode(array("UserCode"=>$user["username"],"message"=>true)) ;	
-					//print_r($_SESSION["FullName"]);
+					
 	} else{
 		//echo json_encode(array("message"=>false));
 	}
