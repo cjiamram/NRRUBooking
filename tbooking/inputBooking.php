@@ -189,14 +189,15 @@
 </div>
 
 </div>
-<div class="col-xs-12">
-<div class="box">
- <div class="box box-success"> 
-<table id="tblSelfBooking" class="table table-bordered table-hover">
+
+
+<div class="col-xs-12"> 
+ <div class="box box-success">   
+  <div id="dvSelfBooking" ></div>
 </div>
-</table>
 </div>
-</div>
+
+
 
 <div>
   <iframe id="frmCapture" style="width:1px;height:1px"></iframe>
@@ -387,10 +388,15 @@
 
     function displayRoomEmpty(){
 
+      /*var sTime=$("#obj_sHr").val()+":"+$("#obj_sMn").val();
+      var fTime=$("#obj_fHr").val()+":"+$("#obj_fMn").val();
+      var building="27";
+      var url="<?=$rootPath?>/tbooking/displayAvailable.php?bookingDate="+$("#obj_bookingDate").val()+"&sTime="+sTime+"&fTime="+fTime+"&building="+building;*/
       var sTime=$("#obj_sHr").val()+":"+$("#obj_sMn").val();
       var fTime=$("#obj_fHr").val()+":"+$("#obj_fMn").val();
       var building="27";
-      var url="<?=$rootPath?>/tbooking/displayAvailable.php?bookingDate="+$("#obj_bookingDate").val()+"&sTime="+sTime+"&fTime="+fTime+"&building="+building;
+      var url="<?=$rootPath?>/tbooking/displayAvailableJS.php?bookingDate="+$("#obj_bookingDate").val()+"&sTime="+sTime+"&fTime="+fTime+"&building="+building;
+
       $("#dvAvailable").load(url);
       $("#modal-available").modal("toggle");
 
@@ -621,8 +627,10 @@
 
 
     function displaySelfBooking(){
-       var url="<?=$rootPath?>/tbooking/displaySelfBookingRoom.php?userCode=<?=$userCode?>";
-       $("#tblSelfBooking").load(url);
+       /*var url="<?=$rootPath?>/tbooking/displaySelfBookingRoom.php?userCode=<?=$userCode?>";
+       $("#tblSelfBooking").load(url);*/
+       var url="<?=$rootPath?>/tbooking/displaySelfBookingRoomJS.php?userCode=<?=$userCode?>"
+       $("#dvSelfBooking").load(url); 
     }
 
   function readOne(id){
