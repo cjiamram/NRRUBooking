@@ -42,7 +42,7 @@
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="js/component.js"></script>
-<script src="js/menuRender.js"></script>
+<script src="js/userMenuRendering.js"></script>
 <script src="js/fileManager.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="dist/js/adminlte.min.js"></script>
@@ -358,7 +358,7 @@ $("#btnBackMain").click(function(){
   }
 
   $( window ).load(function() {
-     //getHeadMenu("#ulMenu");
+     getUserMenu("#ulMenu");
      initialize();
    });
 

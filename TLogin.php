@@ -188,11 +188,9 @@
             url="<?=$rootPath?>/api/nrruCredential.php";
             data=executeData(url,jsonObj);
             if(data.message===true){
-                //$(location).attr('href','userIndex.php');
                 var url="<?=$rootPath?>/menu/setMenuDefault.php?userCode="+$("#txtUser").val();
-                //console.log(url);
                 var flag=executeGet(url);
-                $(location).attr('href','page.php');
+                $(location).attr('href','credentialReceive.php?userCode='+$("#txtUser").val());
             }else{
 
             		swal.fire({

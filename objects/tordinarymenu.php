@@ -55,21 +55,23 @@ class  tordinarymenu{
 		$stmt->execute();
 		return $stmt;
 	}
-	public function getData($keyWord){
-		$key=KeyWord::getKeyWord($this->conn,$this->table_name);
-		$key=($key!="")?$key:"keyWord";
-		$query='SELECT  id,
+	
+
+	public function getData(){
+
+		$query="SELECT  
+			id,
 			menuId,
 			menuName,
 			menuIcon,
 			menuLink
-		FROM t_ordinarymenu WHERE '.$key.' LIKE :keyWord';
+		FROM t_ordinarymenu ORDER BY menuId";
 		$stmt = $this->conn->prepare($query);
-		$keyWord="%{$keyWord}%";
-		$stmt->bindParam(':keyWord',$keyWord);
 		$stmt->execute();
 		return $stmt;
 	}
+
+
 	function delete(){
 		$query='DELETE FROM t_ordinarymenu WHERE id=:id';
 		$stmt = $this->conn->prepare($query);

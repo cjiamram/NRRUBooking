@@ -1,4 +1,6 @@
-var projectPath="/NRRUServiceOnline";
+var full = location.pathname;
+var res = full.split("/");
+var projectPath="/"+res[1];
 function getChildMenu(parentMenu){
    var url="./menu/getChildMenu.php?parent="+parentMenu;
    var data=queryData(url);

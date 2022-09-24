@@ -9,8 +9,7 @@ include_once "../objects/tordinarymenu.php";
 $database = new Database();
 $db = $database->getConnection();
 $obj = new tordinarymenu($db);
-$keyWord=isset($_GET["keyWord"]) ? $_GET["keyWord"] : "";
-$stmt = $obj->getData($keyWord);
+$stmt = $obj->getData();
 $num = $stmt->rowCount();
 if($num>0){
 		$objArr=array();

@@ -9,6 +9,20 @@ class  tquotaprevillage{
 	public $userCode;
 	public $quota;
 	public $duration;
+
+
+	public function isAuthorizeUser($userCode){
+		$query="SELECT userCode 
+		FROM t_quotaprevillage 
+		WHERE userCode=:userCode";
+		$stmt = $this->conn->prepare($query);
+		$stmt->bindParam(":userCode",$userCode);
+		$stmt->execute();
+		$flag=$stmt->rowCount()>0?true:false;
+		return $flag;
+	}
+
+
 	public function create(){
 		$query='INSERT INTO t_quotaprevillage  
         	SET 

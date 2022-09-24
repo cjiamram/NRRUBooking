@@ -4,8 +4,20 @@
 	include_once "config/config.php";
 	$cnf=new Config();
 	$url=$cnf->restURL;
+	
 	require_once("lib/nusoap.php");
+	include_once("objects/tquotaprevillage.php");
+	include_once("config/database.php");
+
+	$database=new Database();
+	$db=$database->getConnection();
+	$objA=new tquotaprevillage($db);
+
+
+
 	$userCode=isset($_GET["userCode"])?$_GET["userCode"]:"";
+
+
 
 	$client = new nusoap_client("http://entrance.nrru.ac.th/nrruwebservice/nrruWebService_SSO.php?wsdl",true);
 	$userCode=isset($_GET["userCode"])?$_GET["userCode"]:"";
@@ -23,9 +35,12 @@
 					$_SESSION["FullName"]=$user->firstname.' '.$user->lastname  ;
 					$_SESSION["Picture"]=$user->picture;
 					$_SESSION["DepartmentId"]=$user->departmentcode1;
-					header("location:page.php");
+					if($objA->isAuthorizeUser($userCode)===true)
+						header("location:page.php");
+					else
+						header("location:userPage.php");
 	} else{
-		//header("location:logout.php");
+		
 	}
 
 ?>
