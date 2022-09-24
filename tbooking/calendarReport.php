@@ -128,10 +128,6 @@
       $("#obj_Room").change(function(){
          displayCalendar($("#obj_Room").val());
       });
-
-
-   
-
       
     });
 

@@ -26,36 +26,52 @@
 <body bgcolor="#7C24DD" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <!-- Save for Web Slices (bg_login.jpg - Slices: 00, 01, 02, 03, 04, 05, 06, 07, 08) -->
 <div class="container-main">
-<table id="Table_01" width="900" height="544" border="0" cellpadding="0" cellspacing="0">
+<table id="Table_01" width="1001" height="604" border="0" cellpadding="0" cellspacing="0">
 	<tr>
-		<td colspan="6">
-			<img src="images/main_1_01.gif" width="900" height="106" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="6">
-			<img src="images/main_1_02.gif" width="900" height="287" alt=""></td>
-	</tr>
-	<tr>
-		<td rowspan="3">
-			<img src="images/main_1_03.gif" width="62" height="151" alt=""></td>
-		<td colspan="3">
-			<img src="images/main_1_04.gif" width="187" height="11" alt=""></td>
+		<td rowspan="6">
+			<img src="images_cos/COS_1_1000_01.gif" width="107" height="604" alt=""></td>
 		<td rowspan="2">
-			<img src="images/main_1_05.gif" width="299" height="84" alt=""></td>
+			<img src="images_cos/COS_1_1000_02.gif" width="419" height="335" alt=""></td>
+		<td colspan="2">
+			<img src="images_cos/COS_1_1000_03.gif" width="474" height="185" alt=""></td>
+		<td>
+			<img src="images_cos/spacer.gif" width="1" height="185" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="2">
+			<img src="images_cos/COS_1_1000_04.gif" width="474" height="240" alt=""></td>
+		<td>
+			<img src="images_cos/spacer.gif" width="1" height="150" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images_cos/COS_1_1000_05.gif" width="419" height="90" alt=""></td>
+		<td>
+			<img src="images_cos/spacer.gif" width="1" height="90" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<img src="images_cos/COS_1_1000_06.gif" width="419" height="119" alt=""></td>
 		<td rowspan="3">
-			<img src="images/main_1_06.gif" width="352" height="151" alt=""></td>
+			<img src="images_cos/COS_1_1000_07.gif" width="247" height="179" alt=""></td>
+		<td>
+			<img src="images_cos/COS_1_1000_08.gif" width="227" height="89" alt=""></td>
+		<td>
+			<img src="images_cos/spacer.gif" width="1" height="89" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2"><a href='#' onclick='clickSignon()'>
+			<img src="images_cos/COS_1_1000_09.gif" border='0' width="227" height="90" alt="">
+				</a>
+		</td>
+		<td>
+			<img src="images_cos/spacer.gif" width="1" height="30" alt=""></td>
 	</tr>
 	<tr>
 		<td>
-			<img src="images/main_1_07.gif" width="1" height="73" alt=""></td>
+			<img src="images_cos/COS_1_1000_10.gif" width="419" height="60" alt=""></td>
 		<td>
-			<a href='#' onclick='clickSignon()'><img src="images/main_1_08.gif" width="185" height="73" alt="" border='0'></a></td>
-		<td>
-			<img src="images/main_1_09.gif" width="1" height="73" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="4">
-			<img src="images/main_1_10.gif" width="486" height="67" alt=""></td>
+			<img src="images_cos/spacer.gif" width="1" height="60" alt=""></td>
 	</tr>
 </table>
 </div>
@@ -64,8 +80,8 @@
 </html>
 <script>
 	function clickSignon(){
-		//var url="https://cos.nrru.ac.th/php-azure/authen.php?workId=a2a8b0bc331ac58b265474307e87fbc61da977c1";
-		var url="http://localhost/NRRUBooking/TLogin.php";
+		var url="https://cos.nrru.ac.th/php-azure/authen.php?workId=a2a8b0bc331ac58b265474307e87fbc61da977c1";
+		//var url="http://localhost/NRRUBooking/TLogin.php";
 
 		window.location.replace(url);
 	}

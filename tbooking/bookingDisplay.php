@@ -27,7 +27,7 @@
      var bookingRoom ='<?=$bookingRoom?>';
      //var url="<?=$rootPath ?>/tbooking/getBookingEvent.php?bookingRoom="+bookingRoom;
      var url="<?=$rootPath ?>/tbooking/getBookingDateEvent.php?bookingRoom="+bookingRoom+"&bDate=<?=$bDate?>";
-     console.log(url);
+     //console.log(url);
      var data=queryData(url);
      return data;
   }
@@ -65,7 +65,7 @@
       }
   }
   $( document ).ready(function() {
-      renderCalendar($("#obj_bDate").val());
+      renderCalendar("<?=date('Y-m-d')?>");
   });
 
 
