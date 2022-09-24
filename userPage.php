@@ -353,19 +353,14 @@ $("#btnBackMain").click(function(){
 
 
   function initialize(){
-  $("#dvMain").load("<?=$rootPath?>/troom/displayRoomPicture.php");
+  $("#dvMain").load("<?=$rootPath?>/troom/displayRoomPictureJS.php");
   $("#dvMain1").css({"display":"none"});
   }
 
   $( window ).load(function() {
-     getHeadMenu("#ulMenu");
+     //getHeadMenu("#ulMenu");
      initialize();
    });
-
-  
-
-  
-
 
   </script>
 </div>

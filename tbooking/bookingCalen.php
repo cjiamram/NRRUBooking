@@ -68,9 +68,9 @@ function initialInput(){
 }
 
 $( document ).ready(function() {
-      var currentdate = new Date();
-      currentdate=getSystemDate(currentdate);
-      renderCalendar(currentdate);
+      //var currentdate = new Date();
+      //currentdate=getSystemDate(currentdate);
+      renderCalendar('<?=date("Y-m-d"))?>');
       //initialInput();
 });
 

@@ -110,7 +110,7 @@
     function displayCalendar(){
 
       var url="tbooking/bookingCalen.php?bookingRoom="+$("#obj_Room").val();
-      console.log(url);
+      //console.log(url);
       $("#calendar").load(url);
 
     }

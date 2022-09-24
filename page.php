@@ -361,12 +361,6 @@ $("#btnBackMain").click(function(){
      getHeadMenu("#ulMenu");
      initialize();
    });
-
-  
-
-  
-
-
   </script>
 </div>
 </body>

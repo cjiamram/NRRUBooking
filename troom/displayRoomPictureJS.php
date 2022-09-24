@@ -49,7 +49,6 @@
  	function roomRendering(){
  		var url="<?=$rootPath?>/troom/getBookingRoom.php";
  		var picF='<?=$cnf->restURL?>';
- 		//console.log(rootPath);
 		var data=queryData(url);
 		var strT="";
 		for(i=0;i<data.length;i++){
@@ -96,7 +95,6 @@
 			strT+="</div>\n";
 		}
 
-		//console.log(strT);
 		$("#dvPicPanel").html(strT);
 
 	}

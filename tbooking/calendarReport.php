@@ -110,7 +110,7 @@
 
     function displayCalendar(roomNo){
 
-      var url="tbooking/bookingDisplay.php?bookingRoom="+roomNo;
+      var url="<?=$rootPath?>/tbooking/bookingDisplay.php?bookingRoom="+roomNo;
       $("#calendar").load(url);
 
     }
@@ -125,12 +125,9 @@
       //isLinkReserve();
      
       //*************Calendar Region******************
-     
-
-      
-    $("#obj_Room").change(function(){
-       displayCalendar($("#obj_Room").val());
-    });
+      $("#obj_Room").change(function(){
+         displayCalendar($("#obj_Room").val());
+      });
 
 
    

@@ -64,7 +64,9 @@
 
       }
   }
- renderCalendar('<?=$bDate?>');
+  $( document ).ready(function() {
+      renderCalendar($("#obj_bDate").val());
+  });
 
 
 </script>
