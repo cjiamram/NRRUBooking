@@ -64,7 +64,7 @@
 </html>
 <script>
 	function clickSignon(){
-		//var url="https://nrrudataservice.nrru.ac.th/php-azure/authen.php?workId=a2a8b0bc331ac58b265474307e87fbc61da977c1";
+		//var url="https://cos.nrru.ac.th/php-azure/authen.php?workId=a2a8b0bc331ac58b265474307e87fbc61da977c1";
 		var url="http://localhost/NRRUBooking/Tlogin.php";
 
 		window.location.replace(url);

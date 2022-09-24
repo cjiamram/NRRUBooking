@@ -46,11 +46,9 @@
 		var data=queryData(url);
 		var strT1="<table width='50%' lass=\"table table-bordered table-hover\">\n";
 		if(data.length>0){
-			//strT1+="<thead><tr><th colspan='3'>อุปกรณ์เสริม</th></tr></thead>\n";
 			strT1+="<tr>\n";
 				strT1+="<td>No.</td>\n";
 				strT1+="<td>อุปกรณ์</td>\n";
-				//strT1+="<td width='50px'>จำนวน</td>\n";
 			strT1+="</tr>\n";
 			jQuery.each( data, function( i, val ) {
 				strT1+="<tr>\n";

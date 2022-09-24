@@ -284,8 +284,9 @@
     </tr>
   </table>
 
-  <table width="100%" class="table table-bordered table-hover" id="tblExtend">
-  </table>
+  <div id="dvExtend-1">
+  </div>
+  
 </div>
 </div>
         
@@ -325,9 +326,10 @@
         <tr>
           <td colspan="2">
               <div class="box box-success">
-       
-                 <table  id="tblSearchMember" class="table table-bordered table-hover">
-                 </table>
+                  <div id="dvSearchMember">
+                  </div>
+                
+                
         
               </div>
           </td>
@@ -451,9 +453,11 @@
 
 
   function searchMember(){
-     var url="<?=$rootPath?>/tmember/displayData.php?keyWord="+$("#txtSearch").val();
-     console.log(url);
-     $("#tblSearchMember").load(url);
+     //var url="<?=$rootPath?>/tmember/displayData.php?keyWord="+$("#txtSearch").val();
+     //console.log(url);
+     //$("#tblSearchMember").load(url);
+     var url="<?=$rootPath?>/tmember/displayMemberJS.php?keyWord="+$("#txtSearch").val();
+     $("#dvSearchMember").load(url);
   }
 
   function confirmDelete(id){
@@ -467,7 +471,7 @@
       showConfirmButton: true
     }).then((willDelete) => {
     if (willDelete.value) {
-      url="/roomReserve/toptional/delete.php?id="+id;
+      url="<?=$rootPath?>/toptional/delete.php?id="+id;
       executeGet(url);
       displayExtend();
     swal.fire({
@@ -552,11 +556,9 @@
 
     function displayExtend(){
        var bookingId=$("#obj_bookingId").val();
-
-       //var url="/roomReserve/toptional/displayData.php?bookingId="+bookingId;
-       var url="<?=$rootPath?>/toptional/displayData.php?tableName=t_optional&dbName=dbreserveroom&bookingId="+$("#obj_bookingId").val();
-       console.log(url);
-      $("#tblExtend").load(url);
+       var url="<?=$rootPath?>/toptional/displayDataJS.php?tableName=t_optional&dbName=dbreserveroom&bookingId="+$("#obj_bookingId").val();
+       //$("#tblExtend").load(url);
+       $("#dvExtend-1").load(url);
 
     }
 
@@ -596,7 +598,6 @@
                   $("#obj_outsiderId").val(lastId);
               }
               bookingRoom();
-             // sendNotify();
               var lastBookingId=getBookingLastId();
               $("#obj_bookingId").val(lastBookingId);
               showExtend();
@@ -670,7 +671,7 @@
       budget1:$("#obj_budget1").val()
 		}
 		var jsonData=JSON.stringify (jsonObj);
-    console.log(jsonData);
+    //console.log(jsonData);
 		var flag=executeData(url,jsonObj,false);
 		return flag;
  

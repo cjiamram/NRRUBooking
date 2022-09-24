@@ -15,14 +15,14 @@
 		while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
 			extract($row);
 			$isExist=$obj->isMenuExist($MenuId,$userName);
-			$objItem=array("MenuId"=>$MenuId,"MenuName"=>$MenuName,"LevelNo"=>$LevelNo,"IsExist"=>$isExist);
+			$objItem=array("MenuId"=>$MenuId,"MenuName"=>$MenuName,"LevelNo"=>intval($LevelNo),"IsExist"=>intval($isExist));
 			array_push($objArr, $objItem);
 			$stmt1=$obj->listChildMenu($MenuId);
 			if($stmt1->rowCount()>0){
 				while($row1=$stmt1->fetch(PDO::FETCH_ASSOC)){
 					extract($row1);
 					$isExist=$obj->isMenuExist($MenuId,$userName);
-					$objItem=array("MenuId"=>$MenuId,"MenuName"=>$MenuName,"LevelNo"=>$LevelNo,"IsExist"=>$isExist);
+					$objItem=array("MenuId"=>$MenuId,"MenuName"=>$MenuName,"LevelNo"=>intval($LevelNo),"IsExist"=>intval($isExist));
 					array_push($objArr, $objItem);
 				}
 			}

@@ -16,7 +16,6 @@
 	$obj = json_decode($data);
 	
 	$user=$obj[0];
-	//print_r($user->staffstatus);
 	if(intval($user->staffstatus)>0){
 					$_SESSION["staffid"]=$user->staffid	;
 					$_SESSION["userCode"]=$user->username;
@@ -24,9 +23,7 @@
 					$_SESSION["FullName"]=$user->firstname.' '.$user->lastname  ;
 					$_SESSION["Picture"]=$user->picture;
 					$_SESSION["DepartmentId"]=$user->departmentcode1;
-					//header("location:testAut.php");
 					header("location:page.php");
-					//print_r($_SESSION["staffid"]);
 	} else{
 		//header("location:logout.php");
 	}

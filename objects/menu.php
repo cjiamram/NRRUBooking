@@ -129,7 +129,7 @@ class Menu{
          $row=$stmt->fetch(PDO::FETCH_ASSOC);
          extract($row);
          $flag=($CNT>0)?true:false;
-         return  $CNT; 
+         return  $flag; 
       }
 
 

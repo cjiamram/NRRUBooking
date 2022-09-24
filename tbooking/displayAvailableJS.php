@@ -15,8 +15,6 @@
 	$fTime=isset($_GET["fTime"]) ? $_GET["fTime"] : "";
 	$fTime=str_replace(" ","",$fTime);
 	$url=$rootPath."/tbooking/getRoomEmpty.php?building=".$_GET["building"]."&bookingDate=".$bookingDate."&sTime=".$sTime."&fTime=".$fTime;
-	//$api=new ClassAPI();
-	//$data=$api->getAPI($url);
 
 ?>
 

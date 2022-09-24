@@ -15,22 +15,20 @@
 
 
 
-	//$stmt=$obj->roomUsageReportOrderDate($sDate,$fDate);
-	//roomUsageReportCriteriaOrderDate($sDate,$fDate,$bookingRoom,$bookingName)
 	$stmt=$obj->roomUsageReportCriteriaOrderDate($sDate,$fDate,$bookingRoom,$bookingName);
 	if($stmt->rowCount()>0){
 		$objArr=array();
 		while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
 			extract($row);
 			$objItem=array(
-				"id"=>$id,
-				"BookingRoom"=>$BookingRoom,
-				"BookingDate"=>Format::getTextDate($BookingDate),
-				"startTime"=>$startTime,
-				"finishTime"=>$finishTime,
-				"HourDiff"=>$HourDiff,
-				"bookingName"=>$bookingName,
-				"activity"=>$activity
+					"id"=>$id,
+					"BookingRoom"=>$BookingRoom,
+					"BookingDate"=>Format::getTextDate($BookingDate),
+					"startTime"=>$startTime,
+					"finishTime"=>$finishTime,
+					"HourDiff"=>$HourDiff,
+					"bookingName"=>$bookingName,
+					"activity"=>$activity
 				);
 			array_push($objArr,$objItem);
 		}

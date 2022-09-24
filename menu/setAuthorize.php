@@ -25,8 +25,10 @@
  		 <input type="button" id="btnRetreive" value="สิทธิ"การใช้งาน  class="btn btn-primary" >
  	</div>
 
- 	<table class="table table-bordered table-hover" id="tblMenu">
- 	</table>
+ 	<!--<table class="table table-bordered table-hover" id="tblMenu">
+ 	</table>-->
+ 	<div id="dvAuthorize">
+ 	</div>
  	</div>
  	
  </div>
@@ -34,9 +36,9 @@
 
 <script>
 		function authorizeMenu(){
-			var url="<?=$rootPath?>/menu/displayAuthorizeMenu.php?userName="+$("#obj_userName").val();
-			console.log(url);
-			$("#tblMenu").load(url);
+
+			var url="<?=$rootPath?>/menu/displayAuthorizeMenuJS.php?userCode="+$("#obj_userName").val();
+			$("#dvAuthorize").load(url);
 		}
 
 		function setAuthen(menuId,objId){
@@ -64,7 +66,6 @@
 
 
 		$("#btnRetreive").click(function(){
-			//console.log("xxxxxx");
 			authorizeMenu();
 		});
 

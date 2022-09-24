@@ -77,7 +77,9 @@
 			var strT1="<table width='100%'>\n";
 			strT1+="<tr><td align='center'><b>หมายเลขห้อง </b>"+data[i].RoomNo+"</td></tr>\n";
 			strT1+="<tr><td align='center'>";
-			var urlPic= "<?=$cnf->restURL?>roomImages/"+data[i].RoomNo+".jpg";
+			//var urlPic= "<?=$cnf->restURL?>roomImages/"+data[i].RoomNo+".jpg";
+			var urlPic= "<?=$cnf->restURL?>"+data[i].picture;
+
 			if(checkFileExist(urlPic)===true)
 				strT1+="<img width='250px' height='150px' src='"+urlPic+"'>";
 			else
