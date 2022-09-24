@@ -80,7 +80,6 @@
 function roomUsageReport(){
 
     var url="<?=$rootPath?>/tbooking/displayRoomUsageJS.php?sDate="+$("#obj_sDate").val()+"&fDate="+$("#obj_fDate").val()+"&bookingRoom="+$("#obj_room").val()+"&bookingName="+$("#obj_reserver").val();
-    console.log("xxxxxxx");
     $("#dvReport").load(url);
 }
 

@@ -44,7 +44,7 @@
 				strT+="<tr>\n";
 				strT+="<td >"+(i+1)+"</td>\n";
 				strV="<input type='hidden' id='R"+i+"' value='"+data[i].roomNo+"'>";
-				strT+="<td width='100px'><a href='#' onclick=\'linkReserve("+i+")\' >"+data[i].roomNo+strV+"</a></td>\n";
+				strT+="<td width='100px'><a class='btn btn-primary' href='#' onclick=\'linkReserve("+i+")\' >"+data[i].roomNo+strV+"&nbsp;&nbsp;<i class='fa fa-pencil-square-o' aria-hidden='true'></i></a></td>\n";
 				strT+="<td>"+data[i].floorNo+"</td>\n";
 				strT+="<td width='60px' align='center'>"+data[i].Building+"</td>\n";
 				strT+="<td width='150px'><textarea row='2' style='width:100%' class='form-control'>"+data[i].Accessory+"</textarea></td>\n";
@@ -64,9 +64,6 @@
 		 $("#dvMain").load(link);
 
 	}
-
-	
-
 	
 	getEmptyRoomRendering();
 
