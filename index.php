@@ -26,52 +26,79 @@
 <body bgcolor="#7C24DD" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <!-- Save for Web Slices (bg_login.jpg - Slices: 00, 01, 02, 03, 04, 05, 06, 07, 08) -->
 <div class="container-main">
-<table id="Table_01" width="1001" height="604" border="0" cellpadding="0" cellspacing="0">
+<table id="Table_01" width="1001" height="605" border="0" cellpadding="0" cellspacing="0">
 	<tr>
-		<td rowspan="6">
-			<img src="images_cos/COS_1_1000_01.gif" width="107" height="604" alt=""></td>
 		<td rowspan="2">
-			<img src="images_cos/COS_1_1000_02.gif" width="419" height="335" alt=""></td>
-		<td colspan="2">
-			<img src="images_cos/COS_1_1000_03.gif" width="474" height="185" alt=""></td>
+			<img src="images_cos/T_01.gif" width="152" height="332" alt=""></td>
+		<td rowspan="2">
+			<img src="images_cos/T_02.gif" width="326" height="332" alt=""></td>
+		<td colspan="4">
+			<img src="images_cos/T_03.gif" width="522" height="112" alt=""></td>
 		<td>
-			<img src="images_cos/spacer.gif" width="1" height="185" alt=""></td>
+			<img src="images_cos/spacer.gif" width="1" height="112" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="3">
+			<img src="images_cos/T_04.gif" width="430" height="391" alt=""></td>
+		<td colspan="2" rowspan="3">
+			<img src="images_cos/T_05.gif" width="92" height="391" alt=""></td>
+		<td>
+			<img src="images_cos/spacer.gif" width="1" height="220" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="images_cos/T_06.gif" width="478" height="96" alt=""></td>
+		<td>
+			<img src="images_cos/spacer.gif" width="1" height="96" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="3">
+			<img src="images_cos/T_07.gif" width="478" height="144" alt=""></td>
+		<td>
+			<img src="images_cos/spacer.gif" width="1" height="75" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="4">
+			<img src="images_cos/T_08.gif" width="245" height="101" alt=""></td>
+		<td colspan="3">
+			<img src="images_cos/T_09.gif" width="277" height="22" alt=""></td>
+		<td>
+			<img src="images_cos/spacer.gif" width="1" height="22" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="2"><a href='#' onclick='clickSignon()'>
+			<img border='0' src="images_cos/T_10.gif" width="210" height="61" alt=""><a></td>
+		<td rowspan="2">
+			<img src="images_cos/T_11.gif" width="67" height="61" alt=""></td>
+		<td>
+			<img src="images_cos/spacer.gif" width="1" height="47" alt=""></td>
 	</tr>
 	<tr>
 		<td colspan="2" rowspan="2">
-			<img src="images_cos/COS_1_1000_04.gif" width="474" height="240" alt=""></td>
+			<img src="images_cos/T_12.gif" width="478" height="32" alt=""></td>
 		<td>
-			<img src="images_cos/spacer.gif" width="1" height="150" alt=""></td>
+			<img src="images_cos/spacer.gif" width="1" height="14" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<img src="images_cos/T_13.gif" width="277" height="18" alt=""></td>
+		<td>
+			<img src="images_cos/spacer.gif" width="1" height="18" alt=""></td>
 	</tr>
 	<tr>
 		<td>
-			<img src="images_cos/COS_1_1000_05.gif" width="419" height="90" alt=""></td>
+			<img src="images_cos/spacer.gif" width="152" height="1" alt=""></td>
 		<td>
-			<img src="images_cos/spacer.gif" width="1" height="90" alt=""></td>
-	</tr>
-	<tr>
-		<td rowspan="2">
-			<img src="images_cos/COS_1_1000_06.gif" width="419" height="119" alt=""></td>
-		<td rowspan="3">
-			<img src="images_cos/COS_1_1000_07.gif" width="247" height="179" alt=""></td>
+			<img src="images_cos/spacer.gif" width="326" height="1" alt=""></td>
 		<td>
-			<img src="images_cos/COS_1_1000_08.gif" width="227" height="89" alt=""></td>
+			<img src="images_cos/spacer.gif" width="245" height="1" alt=""></td>
 		<td>
-			<img src="images_cos/spacer.gif" width="1" height="89" alt=""></td>
-	</tr>
-	<tr>
-		<td rowspan="2"><a href='#' onclick='clickSignon()'>
-			<img src="images_cos/COS_1_1000_09.gif" border='0' width="227" height="90" alt="">
-				</a>
-		</td>
+			<img src="images_cos/spacer.gif" width="185" height="1" alt=""></td>
 		<td>
-			<img src="images_cos/spacer.gif" width="1" height="30" alt=""></td>
-	</tr>
-	<tr>
+			<img src="images_cos/spacer.gif" width="25" height="1" alt=""></td>
 		<td>
-			<img src="images_cos/COS_1_1000_10.gif" width="419" height="60" alt=""></td>
-		<td>
-			<img src="images_cos/spacer.gif" width="1" height="60" alt=""></td>
+			<img src="images_cos/spacer.gif" width="67" height="1" alt=""></td>
+		<td></td>
 	</tr>
 </table>
 </div>
