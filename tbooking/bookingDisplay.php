@@ -25,9 +25,7 @@
 
   function getEvent(){
      var bookingRoom ='<?=$bookingRoom?>';
-     //var url="<?=$rootPath ?>/tbooking/getBookingEvent.php?bookingRoom="+bookingRoom;
      var url="<?=$rootPath ?>/tbooking/getBookingDateEvent.php?bookingRoom="+bookingRoom+"&bDate=<?=$bDate?>";
-     //console.log(url);
      var data=queryData(url);
      return data;
   }

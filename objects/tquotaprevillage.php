@@ -11,6 +11,15 @@ class  tquotaprevillage{
 	public $duration;
 
 
+	public function deleteByUser($userCode){
+		$query="DELETE FROM t_quotaprevillage 
+		WHERE userCode=:userCode";
+		$stmt=$this->conn->prepare($query);
+		$stmt->bindParam("userCode",$userCode);
+		$flag=$stmt->execute();
+		return $flag;
+	}
+
 	public function isAuthorizeUser($userCode){
 		$query="SELECT userCode 
 		FROM t_quotaprevillage 

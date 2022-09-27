@@ -31,13 +31,20 @@
 
     <div class="col-sm-1"><label>ห้อง :</label> </div>
     <div class="col-sm-2">
-      <!--<select class="form-control" ></select>-->
-      <!--<input type="hidden" id="obj_Room" value='<?=$roomNo?>' >-->
-      <!--<label class="form-control" id="obj_RoomLabel"><?=$roomNo?></label>-->
       <select id="obj_Room" class="form-control"></select>
     </div>
+    <div class="col-sm-1"><label>วันที่ :</label>
+    </div>
+    <div class="col-sm-2">
+           <input type="date" id="obj_date" class="form-control" value="<?=date('Y-m-d')?>" >
+
+    </div>
     <div class="col-sm-1">
-      <!--<input type="button" id="btnReserv" class="btn btn-primary"  value="จองห้อง">-->
+      <a href='#' id="obj_display" class="btn btn-primary">
+        <i class="fa fa-search" aria-hidden="true"></i>&nbsp;แสดงผล
+      </a>
+    </div>
+    <div class="col-sm-5">&nbsp;
     </div>
   </div>
 
@@ -110,7 +117,7 @@
 
     function displayCalendar(roomNo){
 
-      var url="<?=$rootPath?>/tbooking/bookingDisplay.php?bookingRoom="+roomNo;
+      var url="<?=$rootPath?>/tbooking/bookingDisplay.php?bookingRoom="+roomNo+"&bDate="+$("#obj_date").val();
       $("#calendar").load(url);
 
     }
@@ -121,11 +128,11 @@
 
     $( document ).ready(function() {
       listRoom();
+      $("#obj_Room").val("27.01.01");
       displayCalendar("27.01.01");
-      //isLinkReserve();
-     
-      //*************Calendar Region******************
-      $("#obj_Room").change(function(){
+    
+
+      $("#obj_display").click(function(){
          displayCalendar($("#obj_Room").val());
       });
       

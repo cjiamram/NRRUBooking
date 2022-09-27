@@ -25,8 +25,7 @@
  		 <input type="button" id="btnRetreive" value="สิทธิ"การใช้งาน  class="btn btn-primary" >
  	</div>
 
- 	<!--<table class="table table-bordered table-hover" id="tblMenu">
- 	</table>-->
+
  	<div id="dvAuthorize">
  	</div>
  	</div>
@@ -35,8 +34,30 @@
 </div>
 
 <script>
-		function authorizeMenu(){
+		function deleteQuota(){
+			var url="<?=$rootPath?>/tquotaprevillage/deleteByUser.php?userCode="+$("#obj_userName").val();
+			var flag=executeGet(url);
+			return flag;
+		}	
 
+		function setQuota(){
+
+			if($("#obj_userName").val()!==""){
+				deleteQuota();
+
+				var jsonObj={
+					userCode:$("#obj_userName").val(),
+					quota:100,
+					duration:100
+				}
+
+				var url="<?=$rootPath?>/tquotaprevillage/create.php";
+				var flag=executeData(url,jsonObj,false);
+			}
+		}
+
+		function authorizeMenu(){
+			setQuota();
 			var url="<?=$rootPath?>/menu/displayAuthorizeMenuJS.php?userCode="+$("#obj_userName").val();
 			$("#dvAuthorize").load(url);
 		}

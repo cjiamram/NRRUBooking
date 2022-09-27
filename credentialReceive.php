@@ -16,9 +16,14 @@
 
 
 	$userCode=isset($_GET["userCode"])?$_GET["userCode"]:"";
+	if($userCode===""){
+		header("location:messageNotify.php");
+	}
+
+	
 	$id=isset($_GET["id"])?$_GET["id"]:"";
 
-	print_r($id);
+	//print_r($id);
 
 
 
