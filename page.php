@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    session_start();
+  session_start();
   //include_once "objects/pageInfo.php";
   include_once "config/config.php";
 

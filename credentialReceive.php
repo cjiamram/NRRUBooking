@@ -16,6 +16,9 @@
 
 
 	$userCode=isset($_GET["userCode"])?$_GET["userCode"]:"";
+	$id=isset($_GET["id"])?$_GET["id"]:"";
+
+	print_r($id);
 
 
 
@@ -25,22 +28,27 @@
 		'userlogin' => $userCode
 	);
 	$data = $client->call("getUserLogin",$params); 
-	$obj = json_decode($data);
 	
-	$user=$obj[0];
-	if(intval($user->staffstatus)>0){
+
+	if(count($data)>0){
+		$obj = json_decode($data);
+		$user=$obj[0];
+		if(intval($user->staffstatus)>0){
 					$_SESSION["staffid"]=$user->staffid	;
 					$_SESSION["userCode"]=$user->username;
 					$_SESSION["UserName"]=$user->username;
 					$_SESSION["FullName"]=$user->firstname.' '.$user->lastname  ;
 					$_SESSION["Picture"]=$user->picture;
+					$_SESSION["id"]=$id;
 					$_SESSION["DepartmentId"]=$user->departmentcode1;
 					if($objA->isAuthorizeUser($userCode)===true)
 						header("location:page.php");
 					else
 						header("location:userPage.php");
-	} else{
-		
+		} 
+	}else{
+		header("location:messageNotify.php");
 	}
 
+	
 ?>

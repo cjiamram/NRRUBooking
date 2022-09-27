@@ -106,10 +106,32 @@
 </body>
 </html>
 <script>
+
+	function deleteAllCookies(){
+		   var cookies = document.cookie.split(";");
+		   //console.log(cookies);
+		   for (var i = 0; i < cookies.length; i++){
+		     //console.log(i);
+		     deleteCookie(cookies[i].split("=")[0]);
+		    }
+	}
+
+	function setCookie(name, value, expirydays) {
+		 var d = new Date();
+		 d.setTime(d.getTime() + (expirydays*24*60*60*1000));
+		 var expires = "expires="+ d.toUTCString();
+		 document.cookie = name + "=" + value + "; " + expires;
+	}
+
+	function deleteCookie(name){
+		  setCookie(name,"",-0.01);
+	}
+
 	function clickSignon(){
 		var url="https://cos.nrru.ac.th/php-azure/authen.php?workId=a2a8b0bc331ac58b265474307e87fbc61da977c1";
 		//var url="http://localhost/NRRUBooking/TLogin.php";
 
 		window.location.replace(url);
 	}
+	 deleteAllCookies();
 </script>
