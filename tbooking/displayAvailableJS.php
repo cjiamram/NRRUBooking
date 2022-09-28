@@ -48,7 +48,7 @@
 				strT+="<td>"+ (i+1) +"</td>\n";
 				strV="linkReserve("+i+")";
 				strR="<input type='hidden' value='"+data[i].roomNo+"' id='R"+i+"'>";
-				strT+="<td><a href='#' onclick=\'"+strV+"\' >"+data[i].roomNo+strR+"</a></td>\n";
+				strT+="<td><a href='#' class='btn btn-primary' onclick=\'"+strV+"\' >"+data[i].roomNo+strR+"</a></td>\n";
 				strT+="<td>"+data[i].floorNo+"</td>\n";
 				strT+="<td>"+data[i].Building+"</td>\n";
 				strT+="<td>"+data[i].Accessory+"</td>\n";
