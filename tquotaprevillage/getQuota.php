@@ -17,13 +17,13 @@
 
 		$row=$stmt->fetch(PDO::FETCH_ASSOC);
 		extract($row);
-		$objItem=array("quota"=>intval($quota),"duration"=>intval($duration));
+		$objItem=array("quota"=>intval($quota),"duration"=>intval($duration),"min"=>0);
 		echo json_encode($objItem);
 		
 	}
 	else
 	
-	echo json_encode(array("quota"=>3,"duration"=>7));
+	echo json_encode(array("quota"=>3,"duration"=>15,"min"=>3));
 
 	
 ?>

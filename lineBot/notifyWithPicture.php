@@ -14,7 +14,7 @@ $url=$cnf->restURL.$path;
 $data=$api->getAPI($url);
 //print_r($data);
 $id=isset($_GET["id"])?$_GET["id"]:0;
-$picture=$restURL."/SCREEN/P-".$id.".png";
+//$picture=$restURL."/SCREEN/P-".$id.".png";
 $token = "mBKdqpUEr07RcnksZmdrQSrlUlSbU0pECJn70uPRuZc" ; // LINE Token
 
 if(!isset($data["message"])){
@@ -25,12 +25,12 @@ if(!isset($data["message"])){
 
 
 
-$imageFile = new CURLFILE($picture); // Local Image file Path
+//$imageFile = new CURLFILE($picture); // Local Image file Path
+//'imageFile' => $imageFile,
 $sticker_package_id = '2';  // Package ID sticker
 $sticker_id = '34';    // ID sticker
   $data = array (
     'message'=>$msg,
-    'imageFile' => $imageFile,
     'stickerPackageId' => $sticker_package_id,
     'stickerId' => $sticker_id
   );

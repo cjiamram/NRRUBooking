@@ -10,7 +10,6 @@
  
   if($flagCheck===true){
       $bDate=date("Y-m-d",strtotime($_GET["bookingDate"]));
-      //print_r($bDate);
       $sTime=$_GET["sTime"];
       $fTime=$_GET["fTime"];
       $sTimes=explode(":",$sTime);
@@ -376,22 +375,19 @@
     }
 
     function sendMsg(id){
-        var url="<?=$rootPath ?>/lineBot/notifyWithPicture.php?id="+id;
+        var url="<?=$rootPath ?>/lineBot/notifyWithMSGW.php?id="+id;
         executeGet(url);
     }
 
     function sendStream(id){
-            var url="<?=$rootPath?>/tbooking/displayBookingRoomById.php?id="+id;
-            $('#frmCapture').attr('src', url)
+            /*var url="<?=$rootPath?>/tbooking/displayBookingRoomById.php?id="+id;
+            $('#frmCapture').attr('src', url)*/
+            sendMsg(id);
     }
 
 
     function displayRoomEmpty(){
 
-      /*var sTime=$("#obj_sHr").val()+":"+$("#obj_sMn").val();
-      var fTime=$("#obj_fHr").val()+":"+$("#obj_fMn").val();
-      var building="27";
-      var url="<?=$rootPath?>/tbooking/displayAvailable.php?bookingDate="+$("#obj_bookingDate").val()+"&sTime="+sTime+"&fTime="+fTime+"&building="+building;*/
       var sTime=$("#obj_sHr").val()+":"+$("#obj_sMn").val();
       var fTime=$("#obj_fHr").val()+":"+$("#obj_fMn").val();
       var building="27";
@@ -471,7 +467,6 @@
 
       }
 
-      //var userCode= $("#obj_staffId").val();
 
 
       if($("#obj_id").val()===""){
@@ -491,7 +486,7 @@
         
           if(getDateDiff()>quota.duration){
                swal.fire({
-                          title: "สิทธิชองคุณจองห้องได้ไม่เกิน 7 วัน",
+                          title: "สิทธิชองคุณจองห้องได้ไม่เกิน 15 วัน",
                           type: "error",
                           buttons: [false, "ปิด"],
                           dangerMode: true,
@@ -499,7 +494,7 @@
                return;
           }
 
-         /* if(getDateDiff()<3){
+          if(getDateDiff()<Math.abs(quota.min)){
                swal.fire({
                           title: "กรุณาจองล่วงหน้าก่อน 3 วัน",
                           type: "error",
@@ -507,7 +502,7 @@
                           dangerMode: true,
                 });
                return;
-          }*/
+          }
 
 
 
