@@ -50,9 +50,9 @@
 			for(i=0;i<data.length;i++){
 				
 				strT+="<tr>\n";
-				strT+="<td>"+(i+1)+"</td>\n";
-				strT+="<td width='150px'>"+data[i].bookingRoom+"</td>\n";
-				strT+="<td width='150px'>"+data[i].bookingDate+"</td>\n";
+				strT+="<td width='50px'>"+(i+1)+"</td>\n";
+				strT+="<td width='100px'>"+data[i].bookingRoom+"</td>\n";
+				strT+="<td width='100px'>"+data[i].bookingDate+"</td>\n";
 				strT+="<td width='100px'>"+data[i].bookingTime+"</td>\n";
 				strT+="<td>"+data[i].bookingName+"</td>\n";
 				strT+="<td><textarea class='form-control' rows='2' style='width:100%'>"+data[i].Activity+"</textarea></td>\n";

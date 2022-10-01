@@ -82,7 +82,7 @@
 			jQuery.each( data, function( i, val ) {
 				
 				 strT+="<tr>\n";
-					 strT+="<td align='center'>"+(i+1)+"</td>\n";
+					 strT+="<td align='center' with='60px'>"+(i+1)+"</td>\n";
 					 strT+="<td >"+val.BookingRoom+"</td>\n";
 					 strT+="<td >"+val.bookingName+"</td>\n";
 					 strT+="<td >"+val.activity+getOptional(val.id)+"</td>\n";

@@ -40,16 +40,18 @@ if($stmt->rowCount()>0){
 
 
 
-$token = "mBKdqpUEr07RcnksZmdrQSrlUlSbU0pECJn70uPRuZc" ; // LINE Token
-
-if($objItem!==""){
+//$token = "mBKdqpUEr07RcnksZmdrQSrlUlSbU0pECJn70uPRuZc" ; // LINE Token
+$token="H1KLTWtcV25z838W91Y06Jv2yl2NVxYtBtqtGpmc5cw";
+/*if($objItem!==""){
   $msg = "\nผู้จอง: ".$objItem["BookingName"]." \n";
-  $msg .= "กิจกรรม: ".$objItem["Activity"]." \n";
+  $msg .= "กิจกรรม: ".$objItem["BookingRoom"]." \n";
   $msg .= "ห้อง: ".$objItem["BookingRoom"]." \n";
   $msg .= "วันที่จอง: ".$objItem["BookingDate"]." \n";
   $msg .= "อุปกรณ์: "."\n".$msgT." \n";
 
-}
+}*/
+
+$msg="TEST By Programer.";
 
 
 

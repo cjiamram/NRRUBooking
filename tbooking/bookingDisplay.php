@@ -17,7 +17,7 @@
  
 </div>
 <script src="<?=$rootPath?>/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="<?=$rootPath?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<?=$rootPath?>/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <link href='<?=$rootPath?>/js/lib/main.css' rel='stylesheet' />
 <script src='<?=$rootPath?>/js/lib/main.js'></script>
 <script src='<?=$rootPath?>/js/lib/locales-all.js'></script>
@@ -26,22 +26,23 @@
   function getEvent(){
      var bookingRoom ='<?=$bookingRoom?>';
      var url="<?=$rootPath ?>/tbooking/getBookingDateEvent.php?bookingRoom="+bookingRoom+"&bDate=<?=$bDate?>";
+     //console.log(url);
      var data=queryData(url);
      return data;
   }
  
 
   function renderCalendar(currentdate){
-
+    //console.log(currentdate);
     var initialLocaleCode = 'th';
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
-        right: 'timeGridWeek,timeGridDay,dayGridMonth,listMonth'
+        right: 'timeGridDay,timeGridWeek,dayGridMonth,listMonth'
       },
-      initialView: 'timeGridWeek',
+      initialView: 'timeGridDay',
       initialDate: currentdate,
       locale: 'th',
       buttonIcons: false, // show the prev/next text
@@ -63,7 +64,7 @@
       }
   }
   $( document ).ready(function() {
-      renderCalendar("<?=date('Y-m-d')?>");
+      renderCalendar("<?=$bDate?>");
   });
 
 

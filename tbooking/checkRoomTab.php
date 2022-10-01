@@ -83,38 +83,35 @@
 	</div>
 	<div></div>
 	<div class="box-body no-padding">
-    <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-empty" type="button" role="tab" aria-controls="nav-empty" aria-selected="true">ห้องว่าง</button>
-        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-usage" type="button" role="tab" aria-controls="nav-usage" aria-selected="false">ห้องใช้งาน</button>
-      </div>
-  </nav>
-  <div class="tab-content" id="nav-tabContent">
-      
-      <div class="tab-pane fade show active" id="nav-empty" role="tabpanel" aria-labelledby="nav-home-tab">
-
-      <div class="box box-warning">
-            <div class="box-header with-border">
-              <h3 class="box-title"><b>ห้องว่าง</b></h3>
-            </div>
-            <table id="tblDisplayEmpty" class="table table-bordered table-hover">
-            </table>
-      </div>
-    </div>
-
-    <div class="tab-pane fade" id="nav-usage" role="tabpanel" aria-labelledby="nav-profile-tab">
-     <div class="box box-success">
-            <div class="box-header with-border">
-              <h3 class="box-title"><b>ห้องที่ถูกใช้งาน</b></h3>
-            </div>
-            <table id="tblDisplayUsage" class="table table-bordered table-hover">
-            </table>
-      </div>
-    </div>
 
 
+		<div class="nav-tabs-custom">
+        <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab_1" data-toggle="tab" id="t1"><label>ห้องว่าง</label></a></li>
+              <li><a href="#tab_2" data-toggle="tab" id="t2"><label>ห้องถูกใช้งาน</label></a></li>
+        </ul>
+         <div class="tab-content">
+          <div class="tab-pane active" id="tab_1" style='display:block'>
+                <div class="box box-warning">
+              
+                <div id="dvEmpty">
+                </div>
+                </div>
+          </div>
 
-  </div>
+          <div class="tab-pane" id="tab_2" style='display:none'>
+                <div class="box box-success">
+                <div id="dvUsage">
+                </div>
+                </div>
+          </div>
+
+
+         </div> 
+    </div>  
+
+ 
+		
 
 
 	</div>
@@ -122,6 +119,17 @@
 </div>
 </section>
 <script>
+
+  function switchTab(tab){
+      if(tab===1){
+          $("#tab_1").attr("style","display:block");
+          $("#tab_2").attr("style","display:none");
+      }else{
+          $("#tab_2").attr("style","display:block");
+          $("#tab_1").attr("style","display:none");
+
+      }
+  } 
 	 
    function listHr(){
       cb="";
@@ -153,17 +161,17 @@
       var sTime=$("#obj_sHr").val()+":"+$("#obj_sMn").val();
       var fTime=$("#obj_fHr").val()+":"+$("#obj_fMn").val();
       var building="27";
-      var url="<?=$rootPath?>/tbooking/displayEmptyPage.php?building="+building+"&bookingDate="+$("#hdn_bookingDate").val()+"&sTime="+sTime+"&fTime="+fTime+"&bookingDate="+$("#obj_bookingDate").val();
-      $("#tblDisplayEmpty").load(url);
+      var url="<?=$rootPath?>/tbooking/displayEmptyRoomJS.php?building="+building+"&bookingDate="+$("#hdn_bookingDate").val()+"&sTime="+sTime+"&fTime="+fTime+"&bookingDate="+$("#obj_bookingDate").val();
+      $("#dvEmpty").load(url);
+
     }
 
     function displayRoomUsage(){
       var sTime=$("#obj_sHr").val()+":"+$("#obj_sMn").val();
       var fTime=$("#obj_fHr").val()+":"+$("#obj_fMn").val();
       var building="27";
-
-      var url="<?=$rootPath?>/tbooking/displayUsagePage.php?building="+building+"&sTime="+sTime+"&fTime="+fTime+"&bookingDate="+$("#obj_bookingDate").val();
-      $("#tblDisplayUsage").load(url);
+      var url="<?=$rootPath?>/tbooking/displayUsageJS.php?building="+building+"&sTime="+sTime+"&fTime="+fTime+"&bookingDate="+$("#obj_bookingDate").val();
+      $("#dvUsage").load(url);
     }
 
     $(document).ready(function() {
@@ -173,10 +181,19 @@
         displayRoomEmpty();
         displayRoomUsage();
 
+        $("#t1").click(function(){
+          switchTab(1);
+        });
+
+
+        $("#t2").click(function(){
+          switchTab(2);
+        });
+
 
         $("#obj_bookingDate").change(function(){
           $("#hdn_bookingDate").val($("#obj_bookingDate").val());
-          console.log($("#hdn_bookingDate").val());
+          //console.log($("#hdn_bookingDate").val());
         });
 
 

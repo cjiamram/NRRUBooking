@@ -63,18 +63,15 @@
 <div class="box"></div>
 <div class="box-body">
  <div class="col-xs-12"> 
+    <!---->
   <div class="box box-success">
     <table width="100%">
-
       <tr>
         <td width="60%">
-
-                    <div class="box-body">
+              <div class="box-body">
               <div class='form-group'>
                 <label class="col-sm-12" id="lblBookingRoom"><u>ระบุห้อง:</u></label>
-                
                 <div class="col-sm-12">
-                
                   <select class="form-control" id='obj_bookingRoom' ></select>
                 </div>
               </div>

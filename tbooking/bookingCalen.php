@@ -41,7 +41,7 @@
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
-        right: 'timeGridWeek,timeGridDay,dayGridMonth,listMonth'
+        right: 'timeGridDay,timeGridWeek,dayGridMonth,listMonth'
       },
       initialView: 'timeGridDay',
       initialDate: currentdate,
