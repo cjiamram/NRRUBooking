@@ -51,7 +51,7 @@
 				
 				strT+="<tr>\n";
 				strT+="<td width='50px'>"+(i+1)+"</td>\n";
-				strT+="<td width='100px'>"+data[i].bookingRoom+"</td>\n";
+				strT+="<td width='100px'><span class='btn btn-warning'>"+data[i].bookingRoom+"</span></td>\n";
 				strT+="<td width='100px'>"+data[i].bookingDate+"</td>\n";
 				strT+="<td width='100px'>"+data[i].bookingTime+"</td>\n";
 				strT+="<td>"+data[i].bookingName+"</td>\n";

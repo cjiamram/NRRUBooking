@@ -3,6 +3,20 @@
   $cnf=new Config();
   $rootPath=$cnf->path;
 ?>
+
+<style>
+.label {
+  color: white;
+  padding: 8px;
+  font-family: Arial;
+}
+.success {background-color: #04AA6D;} /* Green */
+.info {background-color: #2196F3;} /* Blue */
+.warning {background-color: #ff9800;} /* Orange */
+.danger {background-color: #f44336;} /* Red */ 
+.other {background-color: #e7e7e7; color: black;} /* Gray */ 
+</style>
+
 <section class="content container-fluid">
 <div class="box">
 	<div class="box box-primary">
@@ -86,13 +100,13 @@
 
 
 		<div class="nav-tabs-custom">
-        <ul class="nav nav-tabs">
-              <li class="active"><a href="#tab_1" data-toggle="tab" id="t1"><label>ห้องว่าง</label></a></li>
-              <li><a href="#tab_2" data-toggle="tab" id="t2"><label>ห้องถูกใช้งาน</label></a></li>
-        </ul>
+              <a href="#tab_1" class="btn btn-primary" id="t1"><i class="fa fa-list-ul" aria-hidden="true">&nbsp;ห้องว่าง</i></a>
+              <a href="#tab_2" class="btn btn-warning"  id="t2"><i class="fa fa-calendar-times-o" aria-hidden="true">&nbsp;ห้องถูกใช้งาน</i></a>
+    
+
          <div class="tab-content">
           <div class="tab-pane active" id="tab_1" style='display:block'>
-                <div class="box box-warning">
+                <div class="box box-primary">
               
                 <div id="dvEmpty">
                 </div>
@@ -100,7 +114,7 @@
           </div>
 
           <div class="tab-pane" id="tab_2" style='display:none'>
-                <div class="box box-success">
+                <div class="box box-warning">
                 <div id="dvUsage">
                 </div>
                 </div>
