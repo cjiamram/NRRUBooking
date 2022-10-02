@@ -36,7 +36,7 @@
     <div class="col-sm-1"><label>วันที่ :</label>
     </div>
     <div class="col-sm-2">
-           <input type="date" id="obj_date" class="form-control" value="<?=date('Y-m-d')?>" >
+           <input type="date" id="obj_bDate" class="form-control" value="<?=date('Y-m-d')?>" >
 
     </div>
     <div class="col-sm-1">
@@ -117,7 +117,7 @@
 
     function displayCalendar(roomNo){
 
-      var url="<?=$rootPath?>/tbooking/bookingDisplay.php?bookingRoom="+roomNo+"&bDate="+$("#obj_date").val();
+      var url="<?=$rootPath?>/tbooking/bookingDisplay.php?bookingRoom="+roomNo+"&bDate="+$("#obj_bDate").val();
       $("#calendar").load(url);
 
     }

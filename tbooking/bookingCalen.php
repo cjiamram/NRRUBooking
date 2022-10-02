@@ -27,7 +27,7 @@
      ?>';
 
      var url="<?=$rootPath ?>/tbooking/getBookingEvent.php?bookingRoom="+bookingRoom;
-     console.log(url);
+     //console.log(url);
      var data=queryData(url);
      return data;
   }
@@ -48,7 +48,7 @@
       locale: 'th',
       buttonIcons: false, // show the prev/next text
       weekNumbers: true,
-      navLinks: true, // can click day/week names to navigate views
+      navLinks: false, // can click day/week names to navigate views
       editable: true,
       dayMaxEvents: true, // allow "more" link when too many events
       events:getEvent()

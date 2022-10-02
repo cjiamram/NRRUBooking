@@ -123,7 +123,7 @@
 	}
 
 	 function bookingRoom(roomNo){
-			  var url="<?=$rootPath?>/tbooking/inputBooking.php?roomNo="+roomNo;
+			  var url="<?=$rootPath?>/tbooking/inputBookingT.php?roomNo="+roomNo;
 			  $("#dvMain").load(url);
 	 }
 

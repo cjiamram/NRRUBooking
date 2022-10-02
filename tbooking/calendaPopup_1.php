@@ -111,7 +111,7 @@
 
     function displayCalendar(){
       var url="tbooking/bookingDisplay.php?bookingRoom="+$("#obj_Room").val()+"&bDate="+$("#obj_bDate").val();
-      console.log(url);
+      //console.log(url);
       $("#calendar").load(url);
 
     }

@@ -4076,6 +4076,7 @@ var FullCalendar = (function (exports) {
         };
         // Conversion
         DateEnv.prototype.toDate = function (m, forcedTzo) {
+            //alert("OK");
             if (this.timeZone === 'local') {
                 return arrayToLocalDate(dateToUtcArray(m));
             }
